@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Reference Manual | Chamberlain's Literature | 10th Grade English</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black: #111111; --butter: #F5E6A0; --honey: #EDD97A; --honey-dark: #c9b24a;
+    --warm-white: #FAFAF8; --light-gray: #f0ede6; --mid-gray: #888;
+  }
+  html { font-size: 15px; }
+  body { font-family: 'Lato', sans-serif; background: var(--warm-white); color: var(--black); line-height: 1.65; }
+
+  /* SCREEN HEADER */
+  .screen-header { background: var(--black); padding: 1.5rem 2rem; }
+  .sh-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; }
+  .sh-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--butter); font-weight: 500; }
+  .sh-sub { font-size: 0.75rem; color: var(--honey); }
+  .sh-print-btn { background: var(--honey); color: var(--black); border: none; padding: 0.5rem 1.25rem; border-radius: 4px; font-family: 'Lato', sans-serif; font-size: 0.78rem; font-weight: 700; cursor: pointer; letter-spacing: 0.04em; }
+  .sh-print-btn:hover { background: var(--honey-dark); }
+  .print-instructions { background: var(--butter); padding: 0.75rem 2rem; font-size: 0.78rem; color: #3a2a00; text-align: center; }
+  .print-instructions strong { font-weight: 700; }
+
+  /* BOOKLET */
+  .booklet { max-width: 900px; margin: 2rem auto; padding: 0 2rem 4rem; }
+
+  /* PANEL = one "page" of the booklet */
+  .panel { background: white; border: 0.5px solid var(--light-gray); border-radius: 6px; margin-bottom: 1.5rem; overflow: hidden; }
+  .panel-head { padding: 0.75rem 1.25rem; background: var(--black); display: flex; justify-content: space-between; align-items: center; }
+  .ph-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 500; color: var(--butter); }
+  .ph-badge { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--honey); }
+  .panel-body { padding: 1.1rem 1.25rem; }
+
+  /* COVER PANEL */
+  .cover-panel { background: var(--black); border-radius: 6px; padding: 2rem 2.25rem; margin-bottom: 1.5rem; }
+  .cp-brand { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--honey); margin-bottom: 0.75rem; }
+  .cp-title { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 500; color: var(--butter); line-height: 1.25; margin-bottom: 0.25rem; }
+  .cp-sub { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; color: rgba(245,230,160,0.65); margin-bottom: 2rem; }
+  .cp-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .cp-field-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--honey); margin-bottom: 0.35rem; }
+  .cp-field-line { border-bottom: 0.5px solid rgba(245,230,160,0.3); height: 24px; }
+
+  /* TYPOGRAPHY */
+  h3 { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 500; color: var(--black); margin: 1rem 0 0.4rem; border-bottom: 0.5px solid var(--light-gray); padding-bottom: 0.25rem; }
+  h3:first-child { margin-top: 0; }
+  h4 { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--black); margin: 0.85rem 0 0.3rem; }
+  p { font-size: 0.85rem; margin-bottom: 0.6rem; color: #1a1a1a; line-height: 1.6; }
+  p:last-child { margin-bottom: 0; }
+  ul, ol { padding-left: 1.2rem; margin-bottom: 0.6rem; }
+  li { font-size: 0.85rem; color: #1a1a1a; margin-bottom: 0.2rem; line-height: 1.55; }
+  li strong { font-weight: 700; }
+
+  /* TWO-COLUMN LAYOUT WITHIN PANEL */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; }
+
+  /* ANNOTATION TABLE */
+  .anno-table { width: 100%; border-collapse: collapse; margin: 0.5rem 0; font-size: 0.83rem; }
+  .anno-table th { background: var(--black); color: var(--butter); padding: 0.35rem 0.6rem; text-align: left; font-size: 0.65rem; letter-spacing: 0.07em; text-transform: uppercase; }
+  .anno-table td { padding: 0.4rem 0.6rem; border-bottom: 0.5px solid var(--light-gray); vertical-align: top; color: #1a1a1a; }
+  .anno-table tr:nth-child(even) td { background: var(--warm-white); }
+  .anno-sym { font-size: 1rem; font-weight: 700; text-align: center; font-family: 'Playfair Display', serif; color: var(--black); }
+
+  /* TALK MOVES */
+  .talk-move { display: flex; gap: 0.75rem; margin-bottom: 0.6rem; padding-bottom: 0.6rem; border-bottom: 0.5px solid var(--light-gray); align-items: flex-start; }
+  .talk-move:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .tm-type { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--honey-dark); flex-shrink: 0; min-width: 90px; margin-top: 2px; }
+  .tm-ex { font-size: 0.85rem; font-style: italic; color: #1a1a1a; }
+
+  /* THESIS FRAMES */
+  .thesis-frame { background: var(--light-gray); border-left: 3px solid var(--honey-dark); border-radius: 0 4px 4px 0; padding: 0.6rem 0.85rem; margin: 0.5rem 0; font-size: 0.83rem; color: #1a1a1a; font-style: italic; line-height: 1.55; }
+  .tf-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--honey-dark); margin-bottom: 0.25rem; font-style: normal; }
+
+  /* DIAGRAM */
+  .diagram-ex { font-family: monospace; font-size: 0.78rem; background: var(--warm-white); border: 0.5px solid var(--light-gray); border-radius: 4px; padding: 0.75rem 1rem; margin: 0.5rem 0; line-height: 1.6; color: #1a1a1a; }
+
+  /* MLA TABLE */
+  .mla-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin: 0.5rem 0; }
+  .mla-table th { background: var(--black); color: var(--butter); padding: 0.35rem 0.6rem; text-align: left; font-size: 0.63rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .mla-table td { padding: 0.4rem 0.6rem; border-bottom: 0.5px solid var(--light-gray); vertical-align: top; color: #1a1a1a; font-size: 0.8rem; }
+  .mla-table td em { font-style: italic; }
+
+  /* MORPHEME TABLE */
+  .morph-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+  .morph-table th { background: var(--black); color: var(--butter); padding: 0.3rem 0.5rem; text-align: left; font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .morph-table td { padding: 0.3rem 0.5rem; border-bottom: 0.5px solid var(--light-gray); color: #1a1a1a; }
+  .morph-table tr:nth-child(even) td { background: var(--warm-white); }
+  .morph-root { font-weight: 700; color: var(--honey-dark); }
+
+  /* STANDARDS TABLE */
+  .std-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+  .std-table th { background: var(--black); color: var(--butter); padding: 0.3rem 0.5rem; text-align: left; font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .std-table td { padding: 0.35rem 0.5rem; border-bottom: 0.5px solid var(--light-gray); vertical-align: top; color: #1a1a1a; line-height: 1.45; }
+  .std-table tr:nth-child(even) td { background: var(--warm-white); }
+  .std-code { font-weight: 700; color: var(--honey-dark); white-space: nowrap; }
+  .std-section-row td { background: var(--light-gray) !important; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--mid-gray); padding: 0.25rem 0.5rem; }
+
+  /* GLOSSARY */
+  .glossary-term { margin-bottom: 0.55rem; }
+  .gt-word { font-weight: 700; font-size: 0.87rem; color: var(--black); }
+  .gt-def { font-size: 0.82rem; color: #333; line-height: 1.5; }
+  .gt-ex { font-size: 0.78rem; color: var(--mid-gray); font-style: italic; }
+
+  /* NORMS / GOALS (blank fill-in sections) */
+  .fill-section { margin: 0.6rem 0; }
+  .fill-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--mid-gray); margin-bottom: 0.3rem; }
+  .fill-line { border-bottom: 0.5px solid var(--light-gray); height: 26px; margin-bottom: 0.15rem; }
+  .fill-line-sm { border-bottom: 0.5px solid var(--light-gray); height: 20px; margin-bottom: 0.15rem; }
+
+  /* SIGNAL PHRASES */
+  .signal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; margin: 0.5rem 0; }
+  .signal-chip { background: var(--light-gray); border-radius: 3px; padding: 0.35rem 0.6rem; font-size: 0.8rem; font-style: italic; color: #333; }
+
+  /* FOOTER */
+  .booklet-footer { text-align: center; font-size: 0.72rem; color: var(--mid-gray); margin-top: 1rem; padding: 0.75rem; }
+
+  /* PRINT STYLES */
+  @media print {
+    .screen-header, .print-instructions, .sh-print-btn { display: none; }
+    body { font-size: 9pt; background: white; }
+    .booklet { max-width: 100%; margin: 0; padding: 0; }
+    .panel { border: 0.5px solid #ccc; border-radius: 0; margin-bottom: 0; page-break-inside: avoid; }
+    .panel + .panel { border-top: none; }
+    .cover-panel { border-radius: 0; margin-bottom: 0; page-break-after: always; }
+    .panel-head { padding: 0.5rem 0.85rem; }
+    .panel-body { padding: 0.75rem 0.85rem; }
+    .ph-title { font-size: 0.88rem; }
+    h3 { font-size: 0.85rem; }
+    p, li, td, .gt-def, .tm-ex { font-size: 0.78pt; }
+    .two-col { gap: 0.85rem; }
+    .three-col { gap: 0.5rem; }
+  }
+
+  @media (max-width: 600px) {
+    .two-col, .three-col, .cp-fields, .signal-grid { grid-template-columns: 1fr; }
+    .booklet { padding: 0 1rem 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="screen-header">
+  <div class="sh-inner">
+    <div>
+      <p class="sh-sub">Chamberlain's Literature · El Dorado High School · 10th Grade English</p>
+      <p class="sh-title">Student Reference Manual</p>
+    </div>
+    <button class="sh-print-btn" onclick="window.print()">Print Booklet</button>
+  </div>
+</div>
+
+<div class="print-instructions">
+  <strong>To print as a booklet:</strong> Print double-sided, flip on short edge. Fold in half and staple at the center fold. Or print single-sided and staple in the corner. Tuck into the back cover of your notebook.
+</div>
+
+<div class="booklet">
+
+  <!-- COVER -->
+  <div class="cover-panel">
+    <p class="cp-brand">Chamberlain's Literature · El Dorado High School · 2026–27</p>
+    <h1 class="cp-title">Student Reference Manual</h1>
+    <p class="cp-sub">10th Grade English Language Arts</p>
+    <div class="cp-fields">
+      <div>
+        <p class="cp-field-label">My Name</p>
+        <div class="cp-field-line"></div>
+      </div>
+      <div>
+        <p class="cp-field-label">Period</p>
+        <div class="cp-field-line"></div>
+      </div>
+      <div style="grid-column:1/-1">
+        <p class="cp-field-label">This manual belongs with my notebook. If found, please return to Room [TBD].</p>
+        <div class="cp-field-line"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 1: CLASS NORMS + GOALS -->
+  <div class="panel">
+    <div class="panel-head">
+      <p class="ph-title">Our Class Norms &amp; My Goals</p>
+      <p class="ph-badge">Fill in Week 1</p>
+    </div>
+    <div class="panel-body">
+      <div class="two-col">
+        <div>
+          <h3>Our Community Agreements</h3>
+          <p style="font-size:0.78rem;color:var(--mid-gray);font-style:italic;margin-bottom:0.5rem">Built together, Week 1. We all signed them.</p>
+          <div class="fill-section">
+            <div class="fill-line"></div>
+            <div class="fill-line"></div>
+            <div class="fill-line"></div>
+            <div class="fill-line"></div>
+            <div class="fill-line"></div>
+          </div>
+        </div>
+        <div>
+          <h3>My Reader &amp; Writer Goals</h3>
+          <p style="font-size:0.78rem;color:var(--mid-gray);font-style:italic;margin-bottom:0.5rem">Set August 14. Revisit December &amp; May.</p>
+          <h4>As a Reader, I want to:</h4>
+          <div class="fill-section">
+            <div class="fill-line"></div>
+            <div class="fill-line"></div>
+            <div class="fill-line"></div>
+          </div>
+          <h4>As a Writer, I want to:</h4>
+          <div class="fill-section">
+            <div class="fill-line"></div>
+            <div class="fill-line"></div>
+            <div class="fill-line"></div>
+          </div>
+          <h4>December Check-In Note:</h4>
+          <div class="fill-section">
+            <div class="fill-line-sm"></div>
+            <div class="fill-line-sm"></div>
+          </div>
+          <h4>May Check-In Note:</h4>
+          <div class="fill-section">
+            <div class="fill-line-sm"></div>
+            <div class="fill-line-sm"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 2: ANNOTATION KEY + ACCOUNTABLE TALK -->
+  <div class="panel">
+    <div class="panel-head">
+      <p class="ph-title">Annotation Key &amp; Accountable Talk Moves</p>
+      <p class="ph-badge">Reading · Discussion</p>
+    </div>
+    <div class="panel-body">
+      <div class="two-col">
+        <div>
+          <h3>Annotation Symbols</h3>
+          <p style="font-size:0.78rem;color:var(--mid-gray);font-style:italic;margin-bottom:0.5rem">Use consistently. These are your marks — make them meaningful.</p>
+          <table class="anno-table">
+            <thead><tr><th style="width:40px">Symbol</th><th>What It Means</th></tr></thead>
+            <tbody>
+              <tr><td class="anno-sym">?</td><td>I don't understand this / I have a question about it</td></tr>
+              <tr><td class="anno-sym">!</td><td>This surprises me / this matters</td></tr>
+              <tr><td class="anno-sym">★</td><td>This is significant / evidence I may use</td></tr>
+              <tr><td class="anno-sym">○</td><td>A word worth examining more closely</td></tr>
+              <tr><td class="anno-sym">→</td><td>This connects to something else I've noticed</td></tr>
+              <tr><td class="anno-sym">≠</td><td>I disagree / this conflicts with something</td></tr>
+              <tr><td class="anno-sym">T</td><td>This connects to the theme</td></tr>
+              <tr><td class="anno-sym">//</td><td>Parallel structure or repetition worth noting</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.78rem;color:var(--mid-gray);font-style:italic;margin-top:0.5rem">Add your own symbols as needed. The system works when it's yours.</p>
+        </div>
+        <div>
+          <h3>Accountable Talk Moves</h3>
+          <p style="font-size:0.78rem;color:var(--mid-gray);font-style:italic;margin-bottom:0.5rem">Use during discussion. The goal is to build, not perform.</p>
+          <div class="talk-move">
+            <span class="tm-type">Building On</span>
+            <span class="tm-ex">"I want to build on what [name] said — I think the same thing is happening in..."</span>
+          </div>
+          <div class="talk-move">
+            <span class="tm-type">Agreeing + Evidence</span>
+            <span class="tm-ex">"I agree with [name], and the evidence I'd add is..."</span>
+          </div>
+          <div class="talk-move">
+            <span class="tm-type">Respectful Challenge</span>
+            <span class="tm-ex">"I see it differently — I think the text is actually saying..."</span>
+          </div>
+          <div class="talk-move">
+            <span class="tm-type">Pressing for Reasoning</span>
+            <span class="tm-ex">"What makes you say that?" / "Can you say more about why?"</span>
+          </div>
+          <div class="talk-move">
+            <span class="tm-type">Clarifying</span>
+            <span class="tm-ex">"Can you clarify what you mean by ___? I want to make sure I understand."</span>
+          </div>
+          <div class="talk-move">
+            <span class="tm-type">Returning to Text</span>
+            <span class="tm-ex">"I think the text says something different — in [line/passage]..."</span>
+          </div>
+          <div class="talk-move">
+            <span class="tm-type">Synthesizing</span>
+            <span class="tm-ex">"It sounds like we're saying two things: [A] and [B]. Are those compatible?"</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 3: THESIS + EVIDENCE -->
+  <div class="panel">
+    <div class="panel-head">
+      <p class="ph-title">Thesis, Claims &amp; Evidence Integration</p>
+      <p class="ph-badge">Writing</p>
+    </div>
+    <div class="panel-body">
+      <div class="two-col">
+        <div>
+          <h3>The Claim Formula</h3>
+          <p style="font-size:0.82rem;color:#333;margin-bottom:0.5rem">A thesis is a specific, arguable claim — not a fact, not a topic, not a question. It commits you to something someone could disagree with.</p>
+
+          <div class="thesis-frame">
+            <p class="tf-label">Literary Analysis</p>
+            In [title], [author] [argues / reveals / demonstrates] that [specific arguable claim about theme, character, or craft], as evidenced by [brief indication of what you'll examine].
+          </div>
+
+          <div class="thesis-frame">
+            <p class="tf-label">Argumentative</p>
+            [Specific position] because [reason 1], [reason 2], and despite [acknowledgment of complexity or counterargument].
+          </div>
+
+          <div class="thesis-frame">
+            <p class="tf-label">Explanatory / Informational</p>
+            [Subject] can be understood through [organizing principle or framework], specifically [the aspects you will explain].
+          </div>
+
+          <h4>Thesis Test — Ask Yourself:</h4>
+          <ul>
+            <li>Could a thoughtful reader disagree? (If not, it's a fact, not a claim.)</li>
+            <li>Is it specific enough that I know exactly what I have to prove?</li>
+            <li>Does it go beyond restating the prompt?</li>
+          </ul>
+        </div>
+        <div>
+          <h3>The Evidence-Analysis Move</h3>
+          <p style="font-size:0.82rem;color:#333;margin-bottom:0.5rem">Evidence without analysis is quotation. Analysis without evidence is assertion. You need both, connected.</p>
+
+          <h4>The Three-Step Move</h4>
+          <ol>
+            <li><strong>Introduce.</strong> Signal phrase + citation context</li>
+            <li><strong>Evidence.</strong> The quote, paraphrase, or example</li>
+            <li><strong>Analyze.</strong> "This reveals / suggests / demonstrates..." + the so what</li>
+          </ol>
+
+          <h4>Signal Phrases</h4>
+          <div class="signal-grid">
+            <div class="signal-chip">argues that</div>
+            <div class="signal-chip">reveals</div>
+            <div class="signal-chip">demonstrates</div>
+            <div class="signal-chip">suggests</div>
+            <div class="signal-chip">illustrates</div>
+            <div class="signal-chip">establishes</div>
+            <div class="signal-chip">acknowledges</div>
+            <div class="signal-chip">contends</div>
+            <div class="signal-chip">complicates</div>
+            <div class="signal-chip">challenges</div>
+          </div>
+
+          <h4>The Analysis Must Answer:</h4>
+          <ul>
+            <li>"What does this evidence reveal about [character / theme / argument]?"</li>
+            <li>"Why does this word choice / structure / choice matter?"</li>
+            <li>"So what? Why does this evidence support my claim specifically?"</li>
+          </ul>
+          <p style="font-size:0.78rem;color:var(--mid-gray);font-style:italic">If your "analysis" just restates the quote in different words, you haven't analyzed. Ask "so what?" again.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 4: SENTENCE DIAGRAMMING + MLA -->
+  <div class="panel">
+    <div class="panel-head">
+      <p class="ph-title">Sentence Diagramming Quick Reference &amp; MLA Basics</p>
+      <p class="ph-badge">Language · Research</p>
+    </div>
+    <div class="panel-body">
+      <div class="two-col">
+        <div>
+          <h3>Sentence Diagram — Reed-Kellogg Symbols</h3>
+          <p style="font-size:0.82rem;color:#333;margin-bottom:0.5rem">The diagram shows how parts of a sentence relate. Always ask: what does this structure accomplish?</p>
+
+          <h4>Basic Structure</h4>
+          <div class="diagram-ex">
+subject  |  predicate verb
+         |
+         \ predicate adjective/noun</div>
+
+          <h4>Modifiers</h4>
+          <div class="diagram-ex">    modifier
+  ___________
+subject | predicate</div>
+          <p style="font-size:0.78rem;color:var(--mid-gray)">Adjectives and adverbs branch diagonally below the word they modify.</p>
+
+          <h4>Prepositional Phrase</h4>
+          <div class="diagram-ex">subject | verb
+              \
+            prep.
+               \
+              object</div>
+
+          <h4>Relative / Dependent Clause</h4>
+          <div class="diagram-ex">subject | predicate
+    [relative clause branches
+     on a pedestal below the
+     noun it modifies]</div>
+
+          <h4>Compound Elements</h4>
+          <div class="diagram-ex">subject   | verb
+    \    /
+     conj.    (dotted line joins
+    /    \     parallel elements)</div>
+
+          <h4>The Essential Question</h4>
+          <p style="font-size:0.83rem;font-weight:700;margin-top:0.5rem">After every diagram: <em>What does this structure do? Why did the writer build the sentence this way?</em></p>
+        </div>
+        <div>
+          <h3>MLA Citation Basics</h3>
+          <p style="font-size:0.82rem;color:#333;margin-bottom:0.5rem">In-text: (Author page#). Works Cited: alphabetical by author last name, hanging indent. When in doubt, cite.</p>
+
+          <table class="mla-table">
+            <thead><tr><th>Source Type</th><th>Works Cited Format</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>Book</strong></td>
+                <td>Author Last, First. <em>Title of Book</em>. Publisher, Year.</td>
+              </tr>
+              <tr>
+                <td><strong>Article / Essay (in print)</strong></td>
+                <td>Author Last, First. "Title of Article." <em>Title of Magazine/Journal</em>, vol. #, no. #, Year, pp. ##–##.</td>
+              </tr>
+              <tr>
+                <td><strong>Website / Online Article</strong></td>
+                <td>Author Last, First. "Title of Page." <em>Site Name</em>, Date of Publication, URL.</td>
+              </tr>
+              <tr>
+                <td><strong>Article from Database</strong></td>
+                <td>Author Last, First. "Title." <em>Journal</em>, vol. #, no. #, Year, pp. ##–##. <em>Database Name</em>, DOI or URL.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4>In-Text Citation Rules</h4>
+          <ul>
+            <li>After a quote or paraphrase: (Smith 42)</li>
+            <li>No page numbers (website): (Smith)</li>
+            <li>Author named in signal phrase: just (42)</li>
+            <li>Period goes after the citation, not before: "...the truth" (Smith 14).</li>
+          </ul>
+
+          <h4>Quoting vs. Paraphrasing</h4>
+          <ul>
+            <li><strong>Quote</strong> when exact wording matters — cite and put in quotation marks</li>
+            <li><strong>Paraphrase</strong> when the idea matters more than the exact wording — cite, no quotation marks, genuinely rewrite in your own words (not just swap synonyms)</li>
+            <li><strong>Summary</strong> when you need the overall point of a whole source — cite</li>
+          </ul>
+          <p style="font-size:0.78rem;color:var(--mid-gray);font-style:italic">When in doubt about whether to cite: cite. It is always safer to over-attribute than under-attribute.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 5: MORPHEME CHART -->
+  <div class="panel">
+    <div class="panel-head">
+      <p class="ph-title">Morpheme Chart — Roots, Prefixes &amp; Suffixes</p>
+      <p class="ph-badge">Vocabulary · Language</p>
+    </div>
+    <div class="panel-body">
+      <p style="font-size:0.82rem;color:#333;margin-bottom:0.75rem">When you encounter an unfamiliar word, analyze its parts. Morphemes (roots, prefixes, suffixes) carry meaning across hundreds of words. Learn these and unlock vocabulary across every subject.</p>
+      <div class="two-col">
+        <div>
+          <table class="morph-table">
+            <thead><tr><th>Morpheme</th><th>Meaning</th><th>Examples</th></tr></thead>
+            <tbody>
+              <tr><td class="morph-root">bene-</td><td>good, well</td><td>beneficial, benevolent, benefactor</td></tr>
+              <tr><td class="morph-root">mal-</td><td>bad, evil</td><td>malevolent, malice, malfunction</td></tr>
+              <tr><td class="morph-root">-tract-</td><td>pull, draw</td><td>attract, extract, contract</td></tr>
+              <tr><td class="morph-root">-rupt-</td><td>break</td><td>disrupt, corrupt, interrupt</td></tr>
+              <tr><td class="morph-root">chron-</td><td>time</td><td>chronological, synchronize, anachronism</td></tr>
+              <tr><td class="morph-root">-path-</td><td>feeling, suffering</td><td>empathy, pathology, sympathy</td></tr>
+              <tr><td class="morph-root">-log/-logue</td><td>word, study, reason</td><td>dialogue, monologue, biology</td></tr>
+              <tr><td class="morph-root">-cred-</td><td>believe</td><td>credible, credence, incredulous</td></tr>
+              <tr><td class="morph-root">-vert/-vers-</td><td>turn</td><td>invert, subvert, controversial</td></tr>
+              <tr><td class="morph-root">-scrib/-script-</td><td>write</td><td>describe, inscribe, prescribe</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <table class="morph-table">
+            <thead><tr><th>Morpheme</th><th>Meaning</th><th>Examples</th></tr></thead>
+            <tbody>
+              <tr><td class="morph-root">-port-</td><td>carry</td><td>transport, import, portable</td></tr>
+              <tr><td class="morph-root">-dict-</td><td>say, tell</td><td>predict, contradict, dictate</td></tr>
+              <tr><td class="morph-root">-mort-</td><td>death</td><td>mortal, immortal, mortify</td></tr>
+              <tr><td class="morph-root">-vid/-vis-</td><td>see</td><td>video, vision, evident</td></tr>
+              <tr><td class="morph-root">-struct-</td><td>build</td><td>construct, structure, instruct</td></tr>
+              <tr><td class="morph-root">anti-</td><td>against</td><td>antithesis, antagonist, anticlimactic</td></tr>
+              <tr><td class="morph-root">trans-</td><td>across, beyond</td><td>transform, transfix, transparent</td></tr>
+              <tr><td class="morph-root">-liter-</td><td>letter</td><td>literal, literary, literature</td></tr>
+              <tr><td class="morph-root">-voc/-vok-</td><td>call, voice</td><td>vocal, advocate, invoke, revoke</td></tr>
+              <tr><td class="morph-root">sub-</td><td>under, below</td><td>subtext, subvert, subordinate</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 6: GLOSSARY PT 1 — LITERARY + RHETORICAL TERMS -->
+  <div class="panel">
+    <div class="panel-head">
+      <p class="ph-title">Literary &amp; Rhetorical Terms — A through M</p>
+      <p class="ph-badge">Reading · Speaking</p>
+    </div>
+    <div class="panel-body">
+      <div class="three-col">
+        <div>
+          <div class="glossary-term"><span class="gt-word">Allusion</span><p class="gt-def">A reference to another text, event, person, or cultural work that imports that work's meaning into the current text.</p></div>
+          <div class="glossary-term"><span class="gt-word">Anachronism</span><p class="gt-def">Something placed in a time period where it doesn't belong — in literature, often deliberate and meaningful.</p></div>
+          <div class="glossary-term"><span class="gt-word">Anaphora</span><p class="gt-def">Repetition of a word or phrase at the beginning of successive clauses for emphasis and rhythm.</p></div>
+          <div class="glossary-term"><span class="gt-word">Antagonist</span><p class="gt-def">The force or character in opposition to the protagonist — not necessarily a villain; can be a circumstance, society, or internal conflict.</p></div>
+          <div class="glossary-term"><span class="gt-word">Chiasmus</span><p class="gt-def">A rhetorical figure where the second half of a statement mirrors the first in reverse order. "Not everything that is faced can be changed, but nothing can be changed until it is faced." (Baldwin)</p></div>
+          <div class="glossary-term"><span class="gt-word">Connotation</span><p class="gt-def">The emotional, cultural, or associative meanings a word carries beyond its literal definition. Contrast with denotation.</p></div>
+          <div class="glossary-term"><span class="gt-word">Denotation</span><p class="gt-def">The literal, dictionary definition of a word — what it means stripped of emotional association.</p></div>
+          <div class="glossary-term"><span class="gt-word">Dramatic Irony</span><p class="gt-def">When the audience knows something a character doesn't, creating tension or tragic effect.</p></div>
+        </div>
+        <div>
+          <div class="glossary-term"><span class="gt-word">Ethos</span><p class="gt-def">Rhetorical appeal based on the speaker's credibility, authority, or character. One of Aristotle's three modes of persuasion.</p></div>
+          <div class="glossary-term"><span class="gt-word">Euphemism</span><p class="gt-def">A mild or indirect expression used in place of a blunt or harsh one. Often obscures reality — worth analyzing what is being softened and why.</p></div>
+          <div class="glossary-term"><span class="gt-word">Fallacy</span><p class="gt-def">A flaw in reasoning — an argument that appears valid but isn't. Common types: ad hominem, straw man, false dichotomy, slippery slope, hasty generalization.</p></div>
+          <div class="glossary-term"><span class="gt-word">Foil</span><p class="gt-def">A character who contrasts with another character to highlight particular traits. The foil doesn't have to be an antagonist.</p></div>
+          <div class="glossary-term"><span class="gt-word">Hyperbole</span><p class="gt-def">Deliberate exaggeration for effect. Signals emotional intensity — worth asking what the exaggeration reveals about the speaker.</p></div>
+          <div class="glossary-term"><span class="gt-word">Imagery</span><p class="gt-def">Language that appeals to the senses — sight, sound, taste, touch, smell. Effective imagery creates embodied understanding, not just visual pictures.</p></div>
+          <div class="glossary-term"><span class="gt-word">Intertextuality</span><p class="gt-def">The way texts reference, respond to, or build upon other texts. All literature exists in conversation with what came before it.</p></div>
+          <div class="glossary-term"><span class="gt-word">Logos</span><p class="gt-def">Rhetorical appeal based on logic, evidence, and reasoning. Can be misused through fallacious logic or cherry-picked data.</p></div>
+        </div>
+        <div>
+          <div class="glossary-term"><span class="gt-word">Metaphor</span><p class="gt-def">A direct comparison that transfers meaning from one thing to another without using "like" or "as." Metaphors frame how we understand their subjects — what they include and what they exclude matters.</p></div>
+          <div class="glossary-term"><span class="gt-word">Metonymy</span><p class="gt-def">A figure of speech in which a related concept substitutes for the intended concept. "The pen is mightier than the sword."</p></div>
+          <div class="glossary-term"><span class="gt-word">Motif</span><p class="gt-def">A recurring element — image, phrase, object, situation — that develops meaning through repetition. Distinct from theme: a motif is a recurring element; a theme is the idea the work develops.</p></div>
+          <div class="glossary-term"><span class="gt-word">Oxymoron</span><p class="gt-def">Two contradictory terms combined — "deafening silence," "bittersweet." Holds a tension that a single word cannot.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 7: GLOSSARY PT 2 — N through Z -->
+  <div class="panel">
+    <div class="panel-head">
+      <p class="ph-title">Literary &amp; Rhetorical Terms — N through Z</p>
+      <p class="ph-badge">Reading · Speaking</p>
+    </div>
+    <div class="panel-body">
+      <div class="three-col">
+        <div>
+          <div class="glossary-term"><span class="gt-word">Narrator</span><p class="gt-def">The voice telling the story. Not the author. First person (I), second person (you), third limited (he/she/they, limited to one character's perspective), third omniscient (access to all characters).</p></div>
+          <div class="glossary-term"><span class="gt-word">Pathos</span><p class="gt-def">Rhetorical appeal based on emotion, values, or empathy. Not inherently manipulative — connecting to shared human experience is legitimate rhetoric.</p></div>
+          <div class="glossary-term"><span class="gt-word">Personification</span><p class="gt-def">Giving human qualities to non-human things. Ask: what kind of person is this non-human thing being compared to? What does that imply?</p></div>
+          <div class="glossary-term"><span class="gt-word">Protagonist</span><p class="gt-def">The central character whose journey or conflict drives the narrative. Not necessarily the hero or a morally good character.</p></div>
+          <div class="glossary-term"><span class="gt-word">Register</span><p class="gt-def">The variety of language appropriate to a particular social situation or purpose. Formal, informal, academic, colloquial — you code-switch between registers constantly.</p></div>
+        </div>
+        <div>
+          <div class="glossary-term"><span class="gt-word">Rhetoric</span><p class="gt-def">The art of effective communication — specifically, the study of how language persuades, informs, and moves audiences. Not a synonym for "empty speech."</p></div>
+          <div class="glossary-term"><span class="gt-word">Satire</span><p class="gt-def">The use of humor, irony, or exaggeration to critique human behavior, society, or institutions. Usually has a serious underlying purpose.</p></div>
+          <div class="glossary-term"><span class="gt-word">Simile</span><p class="gt-def">A comparison using "like" or "as." Unlike metaphor, simile maintains a clear boundary between the two things being compared.</p></div>
+          <div class="glossary-term"><span class="gt-word">Subtext</span><p class="gt-def">What is implied rather than stated — the meaning beneath the surface of what characters say or do. Often more significant than the text itself.</p></div>
+          <div class="glossary-term"><span class="gt-word">Synecdoche</span><p class="gt-def">A figure of speech in which a part stands for the whole (or vice versa). "All hands on deck." Ask: what does the choice of part reveal about the whole?</p></div>
+        </div>
+        <div>
+          <div class="glossary-term"><span class="gt-word">Syntax</span><p class="gt-def">The arrangement of words and phrases to create sentences. Syntax is a craft choice — how a sentence is built shapes how it feels and what it means.</p></div>
+          <div class="glossary-term"><span class="gt-word">Theme</span><p class="gt-def">An arguable claim about human experience that a text develops — not a topic word ("love," "war") but a statement about what the text argues about that topic. Must be more specific than "the theme is loyalty."</p></div>
+          <div class="glossary-term"><span class="gt-word">Tone</span><p class="gt-def">The author's attitude toward the subject, expressed through language. Lives in diction, syntax, what is included and omitted. Distinct from mood (the reader's emotional response).</p></div>
+          <div class="glossary-term"><span class="gt-word">Warrant</span><p class="gt-def">The underlying assumption that connects evidence to a claim in an argument. Often unstated — making warrants explicit reveals whether an argument's logic actually holds.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 8: STANDARDS IN STUDENT LANGUAGE -->
+  <div class="panel">
+    <div class="panel-head">
+      <p class="ph-title">AR 2023 ELA Standards — What They Mean for You</p>
+      <p class="ph-badge">All Strands · Grades 9–10</p>
+    </div>
+    <div class="panel-body">
+      <p style="font-size:0.78rem;color:var(--mid-gray);font-style:italic;margin-bottom:0.75rem">These are the skills this course develops. The codes (RL.9-10.1, etc.) appear on rubrics and feedback. Here's what they mean in plain language.</p>
+      <table class="std-table">
+        <thead><tr><th style="width:110px">Standard</th><th>In Plain Language</th></tr></thead>
+        <tbody>
+          <tr class="std-section-row"><td colspan="2">Reading: Literary Text</td></tr>
+          <tr><td class="std-code">RL.9-10.1</td><td>I can cite the best available evidence from a literary text and explain what the text implies beyond what it states directly.</td></tr>
+          <tr><td class="std-code">RL.9-10.2</td><td>I can identify what a literary text argues about human experience (theme) and trace how that argument develops across the text.</td></tr>
+          <tr><td class="std-code">RL.9-10.3</td><td>I can analyze how complex characters develop, interact, and drive plot and theme — especially when they have conflicting motivations.</td></tr>
+          <tr><td class="std-code">RL.9-10.4</td><td>I can analyze how specific word choices — including figurative language — create cumulative effects on meaning and tone.</td></tr>
+          <tr><td class="std-code">RL.9-10.5</td><td>I can analyze how an author's structural choices — order, pacing, parallel plots, time manipulation — create effects like tension or surprise.</td></tr>
+          <tr><td class="std-code">RL.9-10.6</td><td>I can analyze how a particular cultural experience or perspective shapes what a literary text is able to say.</td></tr>
+          <tr><td class="std-code">RL.9-10.7</td><td>I can compare how the same subject is represented in two different artistic mediums — what each emphasizes and what each leaves out.</td></tr>
+          <tr><td class="std-code">RL.9-10.9</td><td>I can analyze how an author draws on and transforms source material (myth, earlier literature, history) in their own work.</td></tr>
+          <tr class="std-section-row"><td colspan="2">Reading: Informational Text</td></tr>
+          <tr><td class="std-code">RI.9-10.1</td><td>I can cite strong evidence from informational texts and recognize what they imply beyond what they state directly.</td></tr>
+          <tr><td class="std-code">RI.9-10.2</td><td>I can identify the central idea of an informational text and trace how it develops across the whole piece.</td></tr>
+          <tr><td class="std-code">RI.9-10.6</td><td>I can identify an author's point of view and purpose, and analyze how they use rhetoric (ethos, logos, pathos) to advance it.</td></tr>
+          <tr><td class="std-code">RI.9-10.7</td><td>I can integrate and evaluate information from multiple sources, recognizing what each emphasizes and omits.</td></tr>
+          <tr><td class="std-code">RI.9-10.8</td><td>I can evaluate whether an argument's reasoning is valid and its evidence is relevant and sufficient — and identify fallacies.</td></tr>
+          <tr><td class="std-code">RI.9-10.9</td><td>I can analyze how seminal U.S. documents address enduring themes and questions.</td></tr>
+          <tr class="std-section-row"><td colspan="2">Writing</td></tr>
+          <tr><td class="std-code">W.9-10.1</td><td>I can write an argument with a precise claim, valid reasoning, relevant and sufficient evidence, and fair treatment of counterarguments.</td></tr>
+          <tr><td class="std-code">W.9-10.2</td><td>I can write explanatory texts that convey complex ideas clearly through effective organization, precise language, and appropriate examples.</td></tr>
+          <tr><td class="std-code">W.9-10.3</td><td>I can write narratives using effective technique, well-chosen details, pacing, dialogue, and meaningful reflection.</td></tr>
+          <tr><td class="std-code">W.9-10.5</td><td>I can develop my writing through planning, revising, editing, and seeking feedback — not just turning in a first draft.</td></tr>
+          <tr><td class="std-code">W.9-10.9</td><td>I can draw evidence from literary and informational texts to support my analysis, not just as decoration.</td></tr>
+          <tr class="std-section-row"><td colspan="2">Speaking &amp; Listening</td></tr>
+          <tr><td class="std-code">SL.9-10.1</td><td>I can participate in academic discussion — building on others' ideas, citing evidence, asking for reasoning, and contributing my own thinking.</td></tr>
+          <tr><td class="std-code">SL.9-10.3</td><td>I can evaluate a speaker's argument — their reasoning, their evidence, and whether their rhetoric is fair to the complexity of the topic.</td></tr>
+          <tr><td class="std-code">SL.9-10.4</td><td>I can present information clearly, logically, and appropriately for my audience and purpose.</td></tr>
+          <tr class="std-section-row"><td colspan="2">Language</td></tr>
+          <tr><td class="std-code">L.9-10.1</td><td>I can use a range of grammatical structures — including parallel structure, phrases, and clauses — with purpose and control.</td></tr>
+          <tr><td class="std-code">L.9-10.3</td><td>I can make deliberate stylistic choices about syntax and diction — not just avoid errors, but use language consciously.</td></tr>
+          <tr><td class="std-code">L.9-10.4</td><td>I can determine the meaning of unfamiliar words using context clues, morphology, and reference materials.</td></tr>
+          <tr><td class="std-code">L.9-10.5</td><td>I can understand and use figurative language, word relationships, and nuances in word meaning with precision.</td></tr>
+          <tr><td class="std-code">L.9-10.6</td><td>I can use academic and domain-specific vocabulary accurately in reading, writing, speaking, and listening.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="booklet-footer">
+    <p><strong>Chamberlain's Literature</strong> &nbsp;·&nbsp; El Dorado High School &nbsp;·&nbsp; 10th Grade English &nbsp;·&nbsp; 2026–27</p>
+    <p style="margin-top:0.2rem">Keep this manual with your notebook. It lives in the back cover.</p>
+  </div>
+
+</div>
+
+</body>
+</html>
