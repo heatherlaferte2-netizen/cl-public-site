@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syllabus 2026-27 | Chamberlain's Literature</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+  --black:      #111111;
+  --offblack:   #333333;
+  --charcoal:   rgba(255,255,255,.62);
+  --rose:       #f2c4d4;
+  --blush:      #fdf0f4;
+  --white:      #ffffff;
+  /* aliases kept for backwards-compat with existing selectors */
+  --pink:       #f2c4d4;
+  --pink-dark:  #111111;
+  --pink-mid:   #f2c4d4;
+  --pink-light: #fdf0f4;
+  --bg:         #fdf0f4;
+  --card:       #ffffff;
+  --bg-dark:    #111111;
+  --text:       #111111;
+  --muted:      #555555;
+  --faint:      #aaaaaa;
+  --border:     #f2c4d4;
+  --pale-gray:  #ffffff;
+  --light-gray: #f2c4d4;
+  --mid-gray:   rgba(255,255,255,.62);
+  --gold:       #d4b870;
+  /* unit accent colors — unchanged */
+  --u1:#0F6E56;--u1l:#E1F5EE;--u2:#8a6000;--u2l:#FFF3D6;
+  --u3:#185FA5;--u3l:#E6F1FB;--u4:#534AB7;--u4l:#EEEDFE;
+  --s1:#0F6E56;--s1l:#E1F5EE;--s1d:#04342C;
+  --s2:#8a6000;--s2l:#FFF3D6;--s2d:#412402;
+  --s3:#185FA5;--s3l:#E6F1FB;--s3d:#042C53;
+  --s4:#534AB7;--s4l:#EEEDFE;--s4d:#26215C;
+}
+  html{font-size:16px;scroll-behavior:smooth}
+  body{font-family:"Lato",sans-serif;background:var(--black);color:var(--white);line-height:1.7}
+a{color:inherit;text-decoration:none}
+  /* NAV */
+  .cl-nav{background:var(--black);position:sticky;top:0;z-index:100;border-bottom:2px solid var(--pink)}
+  .cl-nav-inner{max-width:1060px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+  .cl-wordmark{display:flex;align-items:center;gap:.65rem;text-decoration:none}
+  .cl-mark{width:34px;height:34px;background:var(--pink);color:var(--black);font-family:"Playfair Display",serif;font-size:.72rem;font-weight:700;letter-spacing:-.5px;display:flex;align-items:center;justify-content:center;border-radius:2px;flex-shrink:0}
+  .cl-name{font-family:"Playfair Display",serif;font-size:.95rem;font-weight:500;color:var(--white)}
+  .cl-nav-links{display:flex;align-items:center;gap:.2rem}
+  .cl-nav-links a{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none;padding:.4rem .65rem;border-radius:3px;transition:color .15s}
+  .cl-nav-links a:hover{color:var(--white);background:rgba(242,196,212,.12)}
+  .cl-nav-links a.active{color:var(--pink-mid)}
+  .nav-div{width:1px;height:13px;background:rgba(255,255,255,.15);margin:0 .2rem}
+  /* PAGE HEADER */
+  .page-header{background:var(--black);padding:3rem 2rem 2.5rem;border-bottom:2px solid var(--pink)}
+  .ph-inner{max-width:900px;margin:0 auto}
+  .ph-back{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;display:inline-block;margin-bottom:1rem}
+  .ph-back:hover{color:var(--pink-mid)}
+  .ph-doc-type{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--black);margin-bottom:.4rem}
+  .ph-title{font-family:"Playfair Display",serif;font-size:1.85rem;font-weight:500;color:var(--white);line-height:1.2}
+  .ph-sub{font-family:"Playfair Display",serif;font-style:italic;font-size:.95rem;color:rgba(255,255,255,.45);margin-top:.3rem}
+  .ph-meta{margin-top:1.25rem;display:flex;gap:2rem;flex-wrap:wrap}
+  .ph-meta-label{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pink-mid)}
+  .ph-meta-val{font-size:.82rem;color:rgba(255,255,255,.6)}
+  /* CURRENTLY */
+  .currently{background:var(--blush);border-bottom:2px solid var(--pink)}
+  .currently-inner{max-width:900px;margin:0 auto;padding:2rem}
+  .currently-eyebrow{display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem}
+  .live-dot{width:7px;height:7px;border-radius:50%;background:var(--u1);flex-shrink:0}
+  .currently-eyebrow span{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pink-dark)}
+  .currently-unit{font-family:"Playfair Display",serif;font-size:1.3rem;font-weight:500;color:var(--black);margin-bottom:.15rem}
+  .currently-eq{font-family:"Playfair Display",serif;font-style:italic;font-size:.92rem;color:#111111;margin-bottom:1.1rem}
+  .currently-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+  .cg-card{background:rgba(255,255,255,.65);border-radius:3px;padding:.8rem 1rem}
+  .cg-label{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pink-dark);margin-bottom:.3rem}
+  .cg-card p,.cg-card li{font-size:.84rem;color:var(--black);line-height:1.5;margin-bottom:.2rem}
+  .cg-card ul{padding-left:1rem;margin:0}
+  .std-sm{display:inline-block;font-size:.62rem;font-weight:700;background:var(--pink);color:var(--white);padding:1px 6px;border-radius:100px;margin:0 2px 3px}
+  .currently-dates{margin-top:1rem;display:flex;gap:1.5rem;flex-wrap:wrap}
+  .cd-item{display:flex;align-items:center;gap:5px}
+  .cd-dot{width:5px;height:5px;border-radius:50%;background:var(--pink);flex-shrink:0}
+  .cd-item span{font-size:.8rem;color:#111111}
+  .cd-item strong{font-weight:700}
+  .currently-note{font-size:.72rem;color:var(--pink-dark);font-style:italic;margin-top:.65rem}
+  /* CONTENT */
+  .page{max-width:900px;margin:0 auto;padding:2.5rem 2rem 4rem}
+  .syl-section{margin:2.5rem 0;padding-bottom:2rem;border-bottom:.5px solid var(--light-gray)}
+  .syl-section:last-of-type{border-bottom:none}
+  .section-label{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mid-gray);margin-bottom:.35rem}
+  .section-title{font-family:"Playfair Display",serif;font-size:1.15rem;font-weight:500;color:var(--white);padding-left:.85rem;border-left:3px solid var(--pink);margin-bottom:1rem}
+  p{font-size:.92rem;margin-bottom:.85rem;color:var(--mid-gray);line-height:1.7}
+  p:last-child{margin-bottom:0}
+  ul,ol{padding-left:1.3rem;margin-bottom:.85rem}
+  li{font-size:.92rem;color:rgba(255,255,255,.75);margin-bottom:.3rem;line-height:1.6}
+  li strong{font-weight:700}
+  h3{font-family:"Playfair Display",serif;font-size:1rem;font-weight:500;color:var(--white);margin:1.5rem 0 .5rem}
+  h4{font-size:.73rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--pink);margin:1.2rem 0 .35rem}
+  .callout{margin:1.2rem 0;padding:.95rem 1.1rem;border-left:3px solid var(--pink);background:var(--pink-light);border-radius:0 4px 4px 0}
+  .callout-label{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pink-dark);margin-bottom:.4rem}
+  .callout p{font-size:.87rem;color:var(--black);margin-bottom:.4rem}
+  .callout p:last-child{margin-bottom:0}
+  .statement-box{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:4px;padding:1.4rem 1.65rem;margin:1.1rem 0}
+  .statement-box p{color:rgba(255,255,255,.62);font-size:.9rem;font-style:italic;line-height:1.75;margin-bottom:.5rem}
+  .statement-box p:last-child{margin-bottom:0}
+  .grade-table{width:100%;border-collapse:collapse;margin:.7rem 0 1.1rem;font-size:.87rem}
+  .grade-table th{background:var(--black);color:var(--white);padding:.42rem .7rem;text-align:left;font-size:.65rem;letter-spacing:.07em;text-transform:uppercase;font-weight:700}
+  .grade-table td{padding:.45rem .7rem;border-bottom:.5px solid var(--light-gray);vertical-align:top;background:rgba(255,255,255,0.03)}
+  .grade-table tr:nth-child(even) td{background:rgba(255,255,255,0.05)}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:.7rem 0 1.1rem}
+  .tc-item{background:var(--white);border:.5px solid var(--light-gray);border-radius:4px;padding:.85rem 1rem}
+  .tc-item h4{margin:0 0 .4rem;color:var(--pink)}
+  .tc-item p,.tc-item li{font-size:.85rem;margin-bottom:.25rem;color:var(--mid-gray)}
+  .tc-item ul{margin:0;padding-left:1rem}
+  .unit-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:.7rem 0 1.1rem}
+  .unit-card{border-radius:4px;overflow:hidden}
+  .uc-head{padding:.6rem .85rem;color:var(--white)}
+  .uc-head-label{font-size:.6rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;opacity:.75}
+  .uc-head-title{font-family:"Playfair Display",serif;font-size:.92rem;font-weight:500;margin-top:1px}
+  .uc-head-dates{font-size:.7rem;font-weight:300;opacity:.8;margin-top:2px}
+  .uc-body{padding:.65rem .85rem;background:var(--white);border:.5px solid var(--light-gray);border-top:none}
+a{color:inherit;text-decoration:none}
+  .uc-eq{font-family:"Playfair Display",serif;font-style:italic;font-size:.82rem;color:var(--mid-gray);line-height:1.45;margin:0}
+  .dates-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:.3rem}
+  .dates-list li{display:flex;gap:.85rem;font-size:.86rem;padding:.28rem 0;border-bottom:.5px solid var(--light-gray);color:var(--mid-gray)}
+  .dates-list li:last-child{border-bottom:none}
+  .dl-date{font-weight:700;flex-shrink:0;min-width:130px;color:var(--white)}
+  /* FOOTER */
+  .cl-footer{background:var(--black);border-top:2px solid var(--pink);padding:2.25rem 2rem}
+  .footer-inner{max-width:1060px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1.5rem}
+  .footer-wordmark{display:flex;align-items:center;gap:.65rem;margin-bottom:.5rem}
+  .footer-name{font-family:"Playfair Display",serif;font-size:.95rem;color:var(--white)}
+  .footer-sub{font-size:.73rem;font-weight:300;color:rgba(255,255,255,.4)}
+  .footer-links p{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pink-mid);margin-bottom:.5rem}
+  .footer-links a{display:block;font-size:.82rem;color:rgba(255,255,255,.5);text-decoration:none;margin-bottom:.25rem}
+  .footer-links a:hover{color:var(--white)}
+  .footer-bottom{max-width:1060px;margin:1.5rem auto 0;padding-top:1.25rem;border-top:.5px solid rgba(255,255,255,.08);font-size:.7rem;color:rgba(255,255,255,.25)}
+  @media(max-width:680px){.currently-grid,.two-col,.unit-grid{grid-template-columns:1fr}.page{padding:1.5rem 1.25rem 3rem}}
+  @media print{.cl-nav,.cl-footer{display:none}.page-header{padding:1rem}.page{padding:0 1rem}body{font-size:10pt}
+a{color:inherit;text-decoration:none}}
+
+/* ══ LIGHT BACKGROUND OVERRIDE ══════════════════════════════════════════════ */
+body { background: #fdf0f4 !important; color: #111111 !important; }
+.doc-body, .content-wrap, .page-body { background: #ffffff !important; }
+.section-block, .currently, .panel, .info-panel {
+  background: #ffffff !important;
+  border-color: rgba(242,196,212,.5) !important;
+}
+.statement-box, .highlight-box, .callout {
+  background: #fdf0f4 !important;
+  color: #111111 !important;
+}
+.section-title, h2, h3 { color: #111111 !important; }
+p { color: #555555 !important; }
+li { color: #333333 !important; }
+.section-label, .eyebrow { color: #f2c4d4 !important; }
+.mid-gray, [class*="mid-gray"] { color: #555555 !important; }
+/* Dark info boxes → light */
+.info-dark, .dark-box, .navy-box {
+  background: #ffffff !important;
+  border: 1.5px solid #f2c4d4 !important;
+  color: #111111 !important;
+}
+/* Grading table */
+table td, table th:not([style*="background"]) { color: #333333 !important; }
+table tr td { border-color: rgba(242,196,212,.3) !important; }
+/* ══════════════════════════════════════════════════════════════════════════ */
+
+</style>
+</head>
+<body>
+<nav class="cl-nav">
+  <div class="cl-nav-inner">
+    <a href="index.html" class="cl-wordmark"><div class="cl-mark">HLC</div><span class="cl-name">Chamberlain's Literature</span></a>
+    <div class="cl-nav-links">
+      <a href="index.html">Home</a><div class="nav-div"></div>
+      <a href="syllabus.html" class="active">Syllabus</a>
+      <a href="reference.html">Reference</a>
+      <div class="nav-div"></div>
+      <a href="index.html#units">Units</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+<header class="page-header">
+  <div class="ph-inner">
+    <a href="index.html" class="ph-back">&larr; Chamberlain's Literature</a>
+    <p class="ph-doc-type">Living Syllabus &middot; Updated Each Quarter</p>
+    <h1 class="ph-title">10th Grade English Language Arts</h1>
+    <p class="ph-sub">El Dorado High School &middot; Academic Year 2026&ndash;27</p>
+    <div class="ph-meta">
+      <div><p class="ph-meta-label">Teacher</p><p class="ph-meta-val">Ms. Chamberlain</p></div>
+      <div><p class="ph-meta-label">Room</p><p class="ph-meta-val">[TBD]</p></div>
+      <div><p class="ph-meta-label">Email</p><p class="ph-meta-val">[school email]</p></div>
+      <div><p class="ph-meta-label">Planning Period</p><p class="ph-meta-val">[TBD]</p></div>
+      <div><p class="ph-meta-label">Last Updated</p><p class="ph-meta-val">August 2026</p></div>
+    </div>
+  </div>
+</header>
+<!-- CURRENTLY - update this section each quarter -->
+<section class="currently">
+  <div class="currently-inner">
+    <div class="currently-eyebrow"><div class="live-dot"></div><span>We Are Currently In</span></div>
+    <h2 class="currently-unit">Unit 1: Truth &amp; Testimony</h2>
+    <p class="currently-eq">&ldquo;Who is believed, and why?&rdquo;</p>
+    <div class="currently-grid">
+      <div class="cg-card"><p class="cg-label">We Are Reading</p><ul><li>[Anchor text &mdash; confirmed before Aug 6]</li><li>Companion: Short texts on credibility &amp; testimony</li><li>Seminal: Selected speech or address</li></ul></div>
+      <div class="cg-card"><p class="cg-label">Standards Focus This Unit</p><span class="std-sm">RL.9-10.1</span><span class="std-sm">RL.9-10.6</span><span class="std-sm">RI.9-10.6</span><span class="std-sm">RI.9-10.8</span><span class="std-sm">W.9-10.1</span><span class="std-sm">SL.9-10.1</span><span class="std-sm">SL.9-10.3</span><span class="std-sm">L.9-10.4</span></div>
+      <div class="cg-card"><p class="cg-label">Upcoming Assessment</p><p>Argumentative essay &mdash; &ldquo;Who is believed in this text, and what forces determine it?&rdquo; Approximate due date: week of October 6.</p></div>
+      <div class="cg-card"><p class="cg-label">Unit Timeline</p><p>August 6 &ndash; October 9, 2026 (Q1 &middot; 45 days)</p><p>Formative: Sept 9 progress report window</p></div>
+    </div>
+    <div class="currently-dates">
+      <div class="cd-item"><span class="cd-dot"></span><span><strong>Sept 4 &amp; 7</strong> No school</span></div>
+      <div class="cd-item"><span class="cd-dot"></span><span><strong>Sept 9</strong> Progress reports</span></div>
+      <div class="cd-item"><span class="cd-dot"></span><span><strong>Oct 6 &amp; 8</strong> Conferences</span></div>
+      <div class="cd-item"><span class="cd-dot"></span><span><strong>Oct 9</strong> Q1 ends</span></div>
+      <div class="cd-item"><span class="cd-dot"></span><span><strong>Oct 12&ndash;16</strong> Fall break</span></div>
+    </div>
+    <p class="currently-note">This section updates at the start of each unit. Bookmark this page for the most current information.</p>
+  </div>
+</section>
+<main class="page">
+  <div class="syl-section">
+    <p class="section-label">About This Course</p>
+    <h2 class="section-title">What This Class Is</h2>
+    <div class="statement-box"><p>&ldquo;This class is about reading things worth reading and writing things worth writing. You will read novels, poems, essays, and speeches &mdash; some written centuries ago, some written last year. You will write arguments, analyses, narratives, and things I cannot entirely predict. You will think carefully about language, because language is how humans make meaning &mdash; and how meaning sometimes gets unmade. I will work hard in here, and I will ask you to work hard too. That is the deal.&rdquo;</p></div>
+    <p>10th grade ELA at El Dorado High School is aligned to the Arkansas 2023 ELA Standards for grades 9&ndash;10. The course addresses all five ELA strands across four thematically organized units built around genuine questions worth pursuing &mdash; not questions with predetermined answers, but ones we investigate together through reading, writing, and discussion.</p>
+    <h3>What You Will Do Here</h3>
+    <ul>
+      <li>Read complex literary and informational texts closely, with genuine attention to how language works</li>
+      <li>Write arguments, explanations, and narratives for real audiences and genuine purposes</li>
+      <li>Participate in substantive academic discussions where your ideas are taken seriously and challenged</li>
+      <li>Maintain a writer's notebook &mdash; a daily generative practice that is yours</li>
+      <li>Study grammar and syntax through the lens of craft, including daily sentence diagramming</li>
+      <li>Develop vocabulary acquisition strategies that transfer across subjects and contexts</li>
+    </ul>
+  </div>
+  <div class="syl-section">
+    <p class="section-label">What You Need</p>
+    <h2 class="section-title">Required Materials</h2>
+    <ul>
+      <li><strong>Writer's Notebook</strong> &mdash; a composition book (black and white cover, college-ruled). Bring one by the second day of school.</li>
+      <li><strong>Pens and pencils</strong> &mdash; annotation is done by hand. No erasable pens for annotation.</li>
+      <li><strong>Anchor texts</strong> &mdash; announced before each unit. No student will be without a text due to cost &mdash; see me privately if access is a concern.</li>
+      <li><strong>Student reference manual</strong> &mdash; distributed Day 1. Keep it tucked into your notebook's back cover.</li>
+    </ul>
+    <div class="callout">
+      <p class="callout-label">Technology Policy</p>
+      <p>Personal devices &mdash; phones, earbuds, laptops &mdash; stay in your bag during class. This is a design choice, not a punishment. The most important tools in this class are a book, a pen, and your mind. On rare occasions when technology serves a specific instructional purpose, you will be told in advance. You will never need to charge anything for this class.</p>
+    </div>
+  </div>
+  <div class="syl-section">
+    <p class="section-label">Assessment &amp; Grading</p>
+    <h2 class="section-title">How Your Grade Works</h2>
+    <p>Grades in this class reflect what you know and can do &mdash; not compliance, neatness, or timeliness alone. <em>Note: If EHS/ESD grading policy specifies different categories or weights, district policy supersedes this.</em></p>
+    <table class="grade-table">
+      <thead><tr><th>Category</th><th>Weight</th><th>What's Included</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Major Assessments</strong></td><td>50%</td><td>Literary analysis essays, research-based arguments, performance tasks, Socratic seminar assessments, on-demand analytical writes. Each graded against specific AR 2023 ELA standards with a rubric.</td></tr>
+        <tr><td><strong>Writing Process &amp; Portfolio</strong></td><td>25%</td><td>Drafts, revisions, process letters, formal notebook check (4&times; per year). Graded on engagement with process, not only final product.</td></tr>
+        <tr><td><strong>Daily Work &amp; Notebook</strong></td><td>25%</td><td>Quick writes, exit tickets, bi-weekly notebook spot checks, discussion participation, annotation and vocabulary practice.</td></tr>
+      </tbody>
+    </table>
+    <div class="two-col">
+      <div class="tc-item"><h4>Revision Policy</h4><p>All major writing assignments may be revised once within two weeks of return. Revised grade replaces original. Revision requires a revision letter explaining what changed and why.</p></div>
+      <div class="tc-item"><h4>Late Work Policy</h4><p>Accepted within one week of due date, no penalty. After one week, maximum 70%. Not accepted after unit ends except in documented circumstances.</p></div>
+    </div>
+  </div>
+  <div class="syl-section">
+    <p class="section-label">Classroom Policies</p>
+    <h2 class="section-title">How This Room Works</h2>
+    <h3>Community Norms</h3>
+    <p>We build our community agreements together during the first week of school. Those agreements &mdash; not a list of rules I hand you &mdash; govern how we treat each other and the work. They are posted in the room and revisited regularly.</p>
+    <h3>Attendance &amp; Make-Up Work</h3>
+    <p>You cannot make up a discussion you weren't in &mdash; you can only participate in the next one. If you are absent on a day we read aloud together, you are responsible for reading independently before the next class. See me when you return from any absence.</p>
+    <h3>Academic Integrity</h3>
+    <p>Your writing is yours. The ideas and language come from your thinking &mdash; not from AI generation, not from copying, not from pasting without attribution. Using AI to generate your writing produces work that is not yours and from which you learn nothing. The consequence for a suspected submission is revision, not a zero.</p>
+    <h3>Differentiation &amp; Accommodations</h3>
+    <p>If you have an IEP, a 504, or another documented accommodation, share it with me in the first week. I will implement your accommodations fully. If you know something about how your brain works best, tell me.</p>
+  </div>
+  <div class="syl-section">
+    <p class="section-label">The Year</p>
+    <h2 class="section-title">Year at a Glance &mdash; 2026&ndash;27</h2>
+    <div class="unit-grid">
+      <div class="unit-card"><div class="uc-head" style="background:var(--u1)"><p class="uc-head-label">Unit 1 &middot; Q1 &middot; 45 Days</p><p class="uc-head-title">Truth &amp; Testimony</p><p class="uc-head-dates">Aug 6 &ndash; Oct 9, 2026</p></div><div class="uc-body"><p class="uc-eq">&ldquo;Who is believed, and why?&rdquo;</p></div></div>
+      <div class="unit-card"><div class="uc-head" style="background:var(--u2)"><p class="uc-head-label">Unit 2 &middot; Q2 &middot; 40 Days</p><p class="uc-head-title">Power &amp; Complicity</p><p class="uc-head-dates">Oct 19 &ndash; Dec 18, 2026</p></div><div class="uc-body"><p class="uc-eq">&ldquo;What do we owe each other?&rdquo;</p></div></div>
+      <div class="unit-card"><div class="uc-head" style="background:var(--u3)"><p class="uc-head-label">Unit 3 &middot; Q3 &middot; 46 Days</p><p class="uc-head-title">Story &amp; History</p><p class="uc-head-dates">Jan 5 &ndash; Mar 12, 2027</p></div><div class="uc-body"><p class="uc-eq">&ldquo;What do we owe the past?&rdquo;</p></div></div>
+      <div class="unit-card"><div class="uc-head" style="background:var(--u4)"><p class="uc-head-label">Unit 4 &middot; Q4</p><p class="uc-head-title">Language &amp; Power</p><p class="uc-head-dates">Mar 29 &ndash; May 2027</p></div><div class="uc-body"><p class="uc-eq">&ldquo;Can language create reality?&rdquo;</p></div></div>
+    </div>
+    <h3>Key Dates &mdash; 2026&ndash;27</h3>
+    <ul class="dates-list">
+      <li><span class="dl-date">Aug 6, 2026</span>First Day of School</li>
+      <li><span class="dl-date">Sep 4 &amp; 7</span>No School (Labor Day)</li>
+      <li><span class="dl-date">Sep 9</span>Progress Reports</li>
+      <li><span class="dl-date">Oct 6 &amp; 8</span>Parent-Teacher Conferences</li>
+      <li><span class="dl-date">Oct 9</span>Q1 Ends (45 days)</li>
+      <li><span class="dl-date">Oct 12&ndash;16</span>Fall Break &mdash; No School</li>
+      <li><span class="dl-date">Oct 20</span>Report Cards</li>
+      <li><span class="dl-date">Nov 11</span>Veterans Day</li>
+      <li><span class="dl-date">Nov 18</span>Progress Reports</li>
+      <li><span class="dl-date">Nov 23&ndash;27</span>Thanksgiving Break &mdash; No School</li>
+      <li><span class="dl-date">Dec 18</span>Q2 Ends (40 days)</li>
+      <li><span class="dl-date">Dec 19 &ndash; Jan 3</span>Christmas Break &mdash; No School</li>
+      <li><span class="dl-date">Jan 4</span>Staff Development &mdash; No School</li>
+      <li><span class="dl-date">Jan 5</span>School Resumes &middot; Report Cards</li>
+      <li><span class="dl-date">Jan 18</span>MLK Holiday &mdash; No School</li>
+      <li><span class="dl-date">Feb 3</span>Progress Reports</li>
+      <li><span class="dl-date">Feb 9 &amp; 11</span>Parent-Teacher Conferences</li>
+      <li><span class="dl-date">Feb 12&ndash;15</span>No School</li>
+      <li><span class="dl-date">Mar 12</span>Q3 Ends (46 days)</li>
+      <li><span class="dl-date">Mar 16</span>Report Cards</li>
+      <li><span class="dl-date">Mar 22&ndash;26</span>Spring Break &mdash; No School</li>
+      <li><span class="dl-date">Apr 21</span>Progress Reports</li>
+      <li><span class="dl-date">May 26</span>Last Day &middot; Q4 Ends (47 days)</li>
+    </ul>
+    <p style="font-size:.75rem;color:var(--mid-gray);font-style:italic;margin-top:.75rem">Dates from the El Dorado School District 2026&ndash;27 Preliminary Calendar. Subject to change. All ESD schools dismiss at 1:30pm every Wednesday.</p>
+  </div>
+  <div class="syl-section">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">Reaching Ms. Chamberlain</h2>
+    <div class="two-col">
+      <div class="tc-item"><h4>Direct Contact</h4><ul><li><strong>Email:</strong> [school email &mdash; TBD]</li><li><strong>Room:</strong> [TBD]</li><li><strong>Planning Period:</strong> [TBD]</li><li><strong>Response time:</strong> Within 24 hours on school days</li></ul></div>
+      <div class="tc-item"><h4>This Website</h4><ul><li>Syllabus updated each quarter</li><li>Reference manual always available to reprint</li><li>Unit pages published each quarter</li><li><strong>Bookmark:</strong> chamberlainslit.neocities.org</li></ul></div>
+    </div>
+  </div>
+</main>
+<footer class="cl-footer">
+  <div class="footer-inner">
+    <div><div class="footer-wordmark"><div class="cl-mark">HLC</div><span class="footer-name">Chamberlain's Literature</span></div><p class="footer-sub">10th Grade English &middot; El Dorado High School &middot; 2026&ndash;27</p></div>
+    <div class="footer-links"><p>Class Documents</p><a href="index.html">Home</a><a href="syllabus.html">Living Syllabus</a><a href="reference.html">Student Reference Manual</a></div>
+    <div class="footer-links"><p>El Dorado School District</p><a href="https://www.eldoradopublicschools.org" target="_blank" rel="noopener">eldoradopublicschools.org</a><a href="https://www.eldoradopublicschools.org/o/ehs" target="_blank" rel="noopener">El Dorado High School</a></div>
+  </div>
+  <div class="footer-bottom">Chamberlain's Literature &middot; chamberlainslit.neocities.org &middot; Living Syllabus 2026&ndash;27</div>
+</footer>
+</body>
+</html>

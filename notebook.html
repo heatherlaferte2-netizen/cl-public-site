@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notebooks & Journals | Chamberlain's Literature | 10th Grade English</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#111111;--offblack:#333333;--rose:#f2c4d4;--blush:#fdf0f4;
+  --white:#ffffff;--pink:#f2c4d4;--muted:#555555;
+  --u1:#0F6E56;--u1l:#E1F5EE;--u2:#8a6000;--u2l:#FFF3D6;
+  --u3:#185FA5;--u3l:#E6F1FB;--u4:#534AB7;--u4l:#EEEDFE;
+}
+html{font-size:15px;scroll-behavior:smooth}
+body{font-family:"Lato",sans-serif;background:var(--blush);color:var(--black);line-height:1.7}
+a{color:inherit;text-decoration:none}
+
+/* ── NAV ── */
+.cl-nav{background:var(--black);position:sticky;top:0;z-index:100;border-bottom:2px solid var(--pink)}
+.cl-nav-inner{max-width:960px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:54px}
+.cl-wordmark{display:flex;align-items:center;gap:.65rem}
+.cl-mark{width:32px;height:32px;background:var(--pink);color:var(--black);font-family:"Playfair Display",serif;font-size:.65rem;font-weight:700;letter-spacing:-.5px;display:flex;align-items:center;justify-content:center;border-radius:2px;flex-shrink:0}
+.cl-brand{display:flex;flex-direction:column;gap:1px}
+.cl-name{font-family:"Playfair Display",serif;font-size:.9rem;font-weight:700;color:var(--white);line-height:1.2}
+.cl-sub{font-size:.57rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+.cl-nav-links{display:flex;gap:.1rem}
+.cl-nav-links a{font-size:.65rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.45);padding:.35rem .6rem;border-radius:3px;transition:color .15s}
+.cl-nav-links a:hover{color:var(--white);background:rgba(255,255,255,.07)}
+
+/* ── PAGE HEADER ── */
+.page-header{background:var(--black);padding:2.75rem 2rem 2.25rem;border-bottom:2px solid var(--pink)}
+.ph-inner{max-width:960px;margin:0 auto}
+.ph-eye{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-bottom:.35rem}
+.ph-title{font-family:"Playfair Display",serif;font-size:1.75rem;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:.25rem}
+.ph-sub{font-family:"Playfair Display",serif;font-style:italic;font-size:.9rem;color:rgba(255,255,255,.4);margin-bottom:1rem}
+.ph-chips{display:flex;gap:.6rem;flex-wrap:wrap}
+.ph-chip{font-size:.65rem;font-weight:700;letter-spacing:.06em;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:3px;padding:.22rem .65rem;color:rgba(255,255,255,.55)}
+
+/* ── PAGE ── */
+.page{max-width:960px;margin:0 auto;padding:2rem 2rem 5rem}
+
+/* ── TWO TOOLS HERO ── */
+.tools-hero{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2.5rem}
+.tool-card{border-radius:8px;overflow:hidden}
+.tc-head{padding:1.1rem 1.25rem 1rem}
+.tc-head-label{font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.2rem;opacity:.75}
+.tc-head-name{font-family:"Playfair Display",serif;font-size:1.3rem;font-weight:700;line-height:1.2;margin-bottom:.3rem;color:var(--white)}
+.tc-head-tag{font-size:.7rem;opacity:.65;color:var(--white)}
+.tool-journal .tc-head{background:var(--black);border-bottom:3px solid var(--pink)}
+.tool-binder .tc-head{background:var(--offblack);border-bottom:3px solid var(--pink)}
+.tc-body{background:var(--white);border:1.5px solid rgba(242,196,212,.4);border-top:none;border-radius:0 0 8px 8px;padding:.9rem 1.1rem}
+.tc-body p{font-size:.8rem;color:var(--muted);line-height:1.7;margin-bottom:.5rem}
+.tc-body p:last-child{margin-bottom:0}
+.tc-rule{display:inline-block;font-size:.65rem;font-weight:700;background:var(--blush);border:1px solid var(--pink);border-radius:3px;padding:.18rem .6rem;color:var(--black);margin:.15rem .2rem 0 0}
+
+/* ── SECTION HEADERS ── */
+.sec{margin-bottom:2.75rem;padding-top:2.25rem;border-top:2px solid rgba(242,196,212,.4)}
+.sec:first-of-type{border-top:none;padding-top:0}
+.sec-eye{font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-bottom:.3rem}
+.sec-title{font-family:"Playfair Display",serif;font-size:1.15rem;font-weight:700;color:var(--black);margin-bottom:.25rem}
+.sec-desc{font-size:.83rem;color:var(--muted);margin-bottom:1.25rem;line-height:1.7;max-width:600px}
+
+/* ── JOURNAL SECTION ── */
+.privacy-banner{background:var(--black);border-radius:7px;padding:1.2rem 1.4rem;margin-bottom:1.25rem}
+.pb-eye{font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pink);margin-bottom:.3rem}
+.pb-title{font-family:"Playfair Display",serif;font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:.5rem}
+.pb-body{font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.75}
+.pb-body strong{color:var(--pink);font-weight:700}
+
+.daily-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.25rem}
+.daily-card{background:var(--white);border:1.5px solid rgba(242,196,212,.4);border-radius:6px;padding:.85rem 1rem}
+.dc-time{font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pink);margin-bottom:.25rem}
+.dc-name{font-family:"Playfair Display",serif;font-size:.9rem;font-weight:700;color:var(--black);margin-bottom:.3rem}
+.dc-body{font-size:.78rem;color:var(--muted);line-height:1.65}
+
+/* ── WORD OF YEAR ── */
+.word-timeline{display:grid;grid-template-columns:auto 1fr;gap:.4rem .85rem;margin:.85rem 0 1rem}
+.wt-day{font-size:.65rem;font-weight:700;color:var(--muted);white-space:nowrap;padding-top:3px;text-align:right;min-width:70px}
+.wt-content{background:var(--white);border:1.5px solid rgba(242,196,212,.4);border-radius:5px;padding:.55rem .85rem;font-size:.78rem;color:var(--offblack);line-height:1.55}
+.wt-content strong{color:var(--black);font-weight:700;display:block;margin-bottom:.1rem}
+.wt-content.commit{border-color:var(--pink);border-left:4px solid var(--pink);border-radius:0 5px 5px 0}
+
+.index-card{background:var(--white);border:2px solid var(--black);border-radius:4px;padding:1rem;width:220px;display:inline-block;margin:.75rem 0;box-shadow:3px 3px 0 rgba(0,0,0,.1)}
+.ic-lines{display:flex;flex-direction:column;gap:.5rem}
+.ic-word{font-family:"Playfair Display",serif;font-size:1.5rem;font-weight:700;color:var(--black);text-align:center;padding:.3rem 0;border-bottom:1px solid #ccc}
+.ic-line{height:18px;border-bottom:1px solid #ddd}
+.ic-note{font-size:.6rem;color:var(--muted);text-align:center;margin-top:.4rem;font-style:italic}
+
+/* ── BINDER SECTION ── */
+.binder-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-bottom:1.1rem}
+.tab-card{border-radius:5px;overflow:hidden}
+.tab-head{padding:.6rem .8rem;display:flex;align-items:center;gap:.4rem}
+.tab-num{width:24px;height:24px;border-radius:2px;background:rgba(0,0,0,.2);color:var(--white);font-size:.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tab-head-name{font-family:"Playfair Display",serif;font-size:.8rem;font-weight:700;color:var(--white);line-height:1.2}
+.tab-body{background:var(--white);border:1.5px solid;border-top:none;border-radius:0 0 5px 5px;padding:.6rem .8rem}
+.tab-body p{font-size:.73rem;color:var(--muted);line-height:1.6}
+.tab-body ul{padding-left:1rem;font-size:.71rem;color:var(--muted);line-height:1.7;margin-top:.2rem}
+
+.tab-1 .tab-head{background:var(--u1)}.tab-1 .tab-body{border-color:rgba(15,110,86,.25)}
+.tab-2 .tab-head{background:var(--u3)}.tab-2 .tab-body{border-color:rgba(24,95,165,.25)}
+.tab-3 .tab-head{background:var(--u2)}.tab-3 .tab-body{border-color:rgba(138,96,0,.25)}
+.tab-4 .tab-head{background:var(--offblack)}.tab-4 .tab-body{border-color:rgba(51,51,51,.15)}
+
+.handout-note{background:var(--blush);border:1.5px solid var(--pink);border-radius:6px;padding:.85rem 1rem;font-size:.8rem;color:var(--black);line-height:1.7;margin-bottom:1.25rem}
+.handout-note strong{font-weight:700}
+
+/* ── STORAGE ROUTINE ── */
+.storage-layout{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem}
+.storage-visual{background:var(--white);border:1.5px solid rgba(242,196,212,.4);border-radius:6px;padding:.9rem 1rem}
+.sv-label{font-size:.57rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pink);margin-bottom:.55rem}
+.storage-box{background:#f0f0f0;border:2px solid #333;border-radius:4px;padding:.75rem;margin-bottom:.35rem;position:relative}
+.storage-box-label{font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#555;margin-bottom:.4rem}
+.journal-spine{display:flex;align-items:center;gap:.2rem;flex-wrap:wrap}
+.spine{width:20px;height:45px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:.38rem;font-weight:700;color:white;writing-mode:vertical-lr;transform:rotate(180deg);text-transform:uppercase}
+.spine:nth-child(odd){background:#c47090}
+.spine:nth-child(even){background:#185FA5}
+.storage-note{font-size:.7rem;color:var(--muted);line-height:1.6}
+.storage-steps{background:var(--white);border:1.5px solid rgba(242,196,212,.4);border-radius:6px;padding:.9rem 1rem}
+.ss-label{font-size:.57rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pink);margin-bottom:.55rem}
+.routine-step{display:flex;gap:.6rem;margin-bottom:.55rem;font-size:.78rem;color:var(--offblack);line-height:1.5}
+.routine-step:last-child{margin-bottom:0}
+.rs-tag{min-width:52px;font-size:.58rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 5px;border-radius:3px;text-align:center;flex-shrink:0;margin-top:2px}
+.rs-enter{background:#E1F5EE;color:#0F6E56}
+.rs-class{background:#E6F1FB;color:#185FA5}
+.rs-exit{background:#EEEDFE;color:#534AB7}
+
+/* ── FAQ / PARENT NOTES ── */
+.faq-list{list-style:none;padding:0}
+.faq-item{background:var(--white);border:1.5px solid rgba(242,196,212,.4);border-radius:6px;padding:.85rem 1rem;margin-bottom:.6rem}
+.faq-q{font-family:"Playfair Display",serif;font-size:.88rem;font-weight:700;color:var(--black);margin-bottom:.35rem}
+.faq-a{font-size:.78rem;color:var(--muted);line-height:1.7}
+.faq-a strong{color:var(--black);font-weight:700}
+
+footer{background:var(--black);border-top:2px solid var(--pink);padding:1.25rem 2rem;text-align:center;font-size:.62rem;color:rgba(255,255,255,.3);letter-spacing:.08em;text-transform:uppercase}
+
+@media(max-width:680px){
+  .tools-hero,.daily-grid,.binder-tabs,.storage-layout{grid-template-columns:1fr}
+  .cl-nav-links{display:none}
+  .page,.ph-inner,.cl-nav-inner{padding-left:1.1rem;padding-right:1.1rem}
+}
+</style>
+</head>
+<body>
+
+<nav class="cl-nav">
+  <div class="cl-nav-inner">
+    <a href="index.html" class="cl-wordmark">
+      <div class="cl-mark">HLC</div>
+      <div class="cl-brand">
+        <span class="cl-name">Chamberlain's Literature</span>
+        <span class="cl-sub">El Dorado High School &nbsp;·&nbsp; 10th Grade English</span>
+      </div>
+    </a>
+    <nav class="cl-nav-links">
+      <a href="index.html">Home</a>
+      <a href="syllabus.html">Syllabus</a>
+      <a href="reference.html">Reference</a>
+    </nav>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="ph-inner">
+    <p class="ph-eye">Classroom Systems · 2026–27</p>
+    <h1 class="ph-title">The Journal &amp; The Binder</h1>
+    <p class="ph-sub">Two tools. Two different jobs. Both essential.</p>
+    <div class="ph-chips">
+      <span class="ph-chip">Write every day</span>
+      <span class="ph-chip">Private journal · No one reads without permission</span>
+      <span class="ph-chip">Academic binder · Organized · Stays in classroom</span>
+      <span class="ph-chip">Word of the year</span>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+<!-- TWO TOOLS -->
+<div class="tools-hero">
+  <div class="tool-card tool-journal">
+    <div class="tc-head">
+      <p class="tc-head-label">Tool 1 · Composition Book</p>
+      <p class="tc-head-name">The Private Journal</p>
+      <p class="tc-head-tag">Stays in the classroom · Write in it every day</p>
+    </div>
+    <div class="tc-body">
+      <p>This is your personal writing space. You write in it at the start and close of every period. It is never collected, never graded for content, and never read without your permission — including by the teacher.</p>
+      <p>It holds your free writes, your reactions to what we read, your word-of-the-year work, and whatever else is on your mind. The composition book is yours in the truest sense.</p>
+      <span class="tc-rule">Private — no reading without permission</span>
+      <span class="tc-rule">Stays in the classroom</span>
+      <span class="tc-rule">Graded for use only</span>
+    </div>
+  </div>
+  <div class="tool-card tool-binder">
+    <div class="tc-head">
+      <p class="tc-head-label">Tool 2 · Binder with Dividers</p>
+      <p class="tc-head-name">The Academic Notebook</p>
+      <p class="tc-head-tag">Organized with four tabs · Stays in the classroom on the shelf</p>
+    </div>
+    <div class="tc-body">
+      <p>This is your organized academic record. Class notes, close reading work, SOAPStone charts, handouts, and writing drafts all live here in four labeled sections.</p>
+      <p>This is what you study from before assessments — during class and any independent work time. It stays in the classroom on its own labeled shelf spot, right alongside your journal, so it never gets lost or left at home. This is the professional, organized side of your learning in this class.</p>
+      <span class="tc-rule">Four labeled tabs</span>
+      <span class="tc-rule">Handouts hole-punched in</span>
+      <span class="tc-rule">Takes home · This one is checked</span>
+    </div>
+  </div>
+</div>
+
+<!-- JOURNAL SECTION -->
+<div class="sec">
+  <p class="sec-eye">The Composition Journal</p>
+  <h2 class="sec-title">Your Private Writing Space</h2>
+
+  <div class="privacy-banner">
+    <p class="pb-eye">The One Rule That Does Not Change</p>
+    <p class="pb-title">No one reads your journal without your permission.</p>
+    <p class="pb-body">Not the teacher. Not another student. Not a substitute. <strong>This journal is yours.</strong> That means you can write honestly in it. You can be confused in it. You can be angry or excited or uncertain in it. Nothing you write in it will be held against you or used to grade you. The only thing that counts is that you actually write. What you write is between you and the page.</p>
+  </div>
+
+  <div class="daily-grid">
+    <div class="daily-card">
+      <p class="dc-time">Start of every period</p>
+      <p class="dc-name">Opening Write</p>
+      <p class="dc-body">The journal opens with you. Before any lesson, before any instruction, you pick up your journal from the shelf and write. The prompt may be on the board, or it may be open — write what is on your mind. Three to five minutes. Every period. No exceptions.</p>
+    </div>
+    <div class="daily-card">
+      <p class="dc-time">End of every period</p>
+      <p class="dc-name">Closing Write</p>
+      <p class="dc-body">Before the bell, the journal comes back out. One sentence to one paragraph: what happened in your thinking today? What are you still wondering? What changed? This is how you know you learned something. Return the journal to the shelf on your way out.</p>
+    </div>
+    <div class="daily-card">
+      <p class="dc-time">First week of school</p>
+      <p class="dc-name">Word of the Year</p>
+      <p class="dc-body">The first week in your journal is dedicated to finding your word for the year. Not assigned — discovered. The journal is where you do that searching, day by day, until the word finds you.</p>
+    </div>
+    <div class="daily-card">
+      <p class="dc-time">All year long</p>
+      <p class="dc-name">What Else Lives Here</p>
+      <p class="dc-body">Free writes prompted by what we read. Reactions to class discussions. Drafts of ideas before they become academic work. Questions you don't want to ask out loud. The things you need to say before you know how to say them in an essay.</p>
+    </div>
+  </div>
+</div>
+
+<!-- WORD OF THE YEAR -->
+<div class="sec">
+  <p class="sec-eye">First Week Ritual</p>
+  <h2 class="sec-title">Word of the Year</h2>
+  <p class="sec-desc">You do not choose your word on the first day. You spend the first week discovering it. The journal is where that discovery happens — one day at a time, until the right word rises to the surface. At the end of the week, you commit.</p>
+
+  <div class="word-timeline">
+    <div class="wt-day">Day 1 · Thu</div>
+    <div class="wt-content"><strong>The teacher shares hers first.</strong> You listen. You wonder. What would your word be? No pressure to decide. Just begin to notice.</div>
+
+    <div class="wt-day">Day 2 · Fri</div>
+    <div class="wt-content"><strong>First journal entry around the idea.</strong> Three questions on the board. You write to them in your journal for ten minutes. No sharing required. Just honest thinking on paper.</div>
+
+    <div class="wt-day">Day 3 · Mon</div>
+    <div class="wt-content"><strong>What keeps coming up?</strong> Look at what you wrote Friday. What words appeared more than once? What ideas kept circling? Write more. You are narrowing, not choosing.</div>
+
+    <div class="wt-day">Day 4 · Tue</div>
+    <div class="wt-content"><strong>From many to two or three.</strong> Write your candidate words at the top of a new page. Under each one: one sentence about why it matters to you right now. Which one makes you feel something when you read it?</div>
+
+    <div class="wt-day">Day 5 · Wed</div>
+    <div class="wt-content commit"><strong>Commitment day.</strong> You choose your word. You decorate an index card with it — the design is yours. The card goes on the classroom bulletin board, where it will live all year. Your word stays visible every day you are in this room.</div>
+  </div>
+
+  <div style="display:flex;align-items:flex-start;gap:1.5rem;flex-wrap:wrap">
+    <div class="index-card">
+      <div class="ic-lines">
+        <div class="ic-word">BRAVE</div>
+        <div class="ic-line"></div>
+        <div class="ic-line"></div>
+        <div class="ic-line"></div>
+      </div>
+      <p class="ic-note">Your design · Your handwriting · Your word</p>
+    </div>
+    <div style="flex:1;min-width:200px">
+      <p style="font-size:.78rem;color:var(--muted);line-height:1.75;margin-bottom:.6rem">The index card is yours to design. Some students draw. Some use color. Some write their word large and leave the rest plain. What matters is that the card is genuinely yours — not decorated to impress anyone.</p>
+      <p style="font-size:.78rem;color:var(--muted);line-height:1.75;margin-bottom:.6rem">Once the cards go on the bulletin board, they stay there. You will walk past your word every day. At the end of each unit, you will return to it in your journal: how has your relationship to this word changed?</p>
+      <p style="font-size:.78rem;font-weight:700;color:var(--black);line-height:1.75">This is your year. This is your word. Choose it like it matters — because it does.</p>
+    </div>
+  </div>
+</div>
+
+<!-- BINDER SECTION -->
+<div class="sec">
+  <p class="sec-eye">The Academic Binder</p>
+  <h2 class="sec-title">Four Tabs · Organized Academic Work</h2>
+  <p class="sec-desc">The binder is your academic home base. It holds everything that is not private — the close reading work, the argument analysis, the writing drafts, the handouts, and the reference materials. It is organized with four labeled dividers.</p>
+
+  <div class="binder-tabs">
+    <div class="tab-card tab-1">
+      <div class="tab-head">
+        <div class="tab-num">1</div>
+        <div class="tab-head-name">Class Notes &amp; Daily Work</div>
+      </div>
+      <div class="tab-body">
+        <p>Everything from in-class instruction. Annotations, exit tickets, close reading notes, SOAPStone charts, observation vs. inference charts. Date-stamped. Chronological.</p>
+        <ul>
+          <li>Annotations from class reading</li>
+          <li>Exit tickets</li>
+          <li>In-class charts and graphic organizers</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-card tab-2">
+      <div class="tab-head">
+        <div class="tab-num">2</div>
+        <div class="tab-head-name">Reading &amp; Analysis</div>
+      </div>
+      <div class="tab-body">
+        <p>Text-specific academic work. SOAPStone completed forms, argument tracking, rhetorical move identification, evidence collection organized by text.</p>
+        <ul>
+          <li>Completed SOAPStone forms</li>
+          <li>Evidence and inference charts</li>
+          <li>Rhetorical move trackers</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-card tab-3">
+      <div class="tab-head">
+        <div class="tab-num">3</div>
+        <div class="tab-head-name">Writing &amp; Drafts</div>
+      </div>
+      <div class="tab-body">
+        <p>Analytical writing from first attempt through final draft. Topic sentences, evidence paragraphs, essay drafts, peer response notes, and teacher feedback.</p>
+        <ul>
+          <li>Analytical paragraph drafts</li>
+          <li>Essay outlines and full drafts</li>
+          <li>Feedback and revision notes</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-card tab-4">
+      <div class="tab-head">
+        <div class="tab-num">4</div>
+        <div class="tab-head-name">Reference Materials</div>
+      </div>
+      <div class="tab-body">
+        <p>Tools you return to across the year. Grammar and sentence guides, literary terms, SOAPStone reference card, rhetorical strategies glossary, vocabulary by unit.</p>
+        <ul>
+          <li>Grammar and diagramming reference</li>
+          <li>Literary terms and rhetorical devices</li>
+          <li>Vocabulary by unit</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="handout-note">
+    <strong>Handout policy:</strong> All handouts are hole-punched and filed in the relevant binder tab — not floating loose, not left in the classroom, not folded in a pocket. When you receive a handout, the first thing you do is hole-punch it and file it. Your binder is only useful if it is actually organized. If you do not have a hole punch, the teacher keeps one at the front of the room.
+  </div>
+</div>
+
+<!-- STORAGE ROUTINE -->
+<div class="sec">
+  <p class="sec-eye">Classroom Routine</p>
+  <h2 class="sec-title">Where Your Journal Lives &amp; How You Get It</h2>
+  <p class="sec-desc">Journals stay in the classroom. This protects them. This also means there is a system for getting yours at the start of every period and returning it at the end. The system is simple and runs itself after the first week.</p>
+
+  <div class="storage-layout">
+    <div class="storage-visual">
+      <p class="sv-label">Journal Shelf — One Box Per Period</p>
+      <div class="storage-box">
+        <div class="storage-box-label">Period 1</div>
+        <div class="journal-spine">
+          <div class="spine">Adams</div>
+          <div class="spine">Baxter</div>
+          <div class="spine">Carter</div>
+          <div class="spine">Davis</div>
+          <div class="spine">Evans</div>
+          <div class="spine">Ford</div>
+          <div class="spine">Grant</div>
+          <div class="spine" style="background:#888">···</div>
+        </div>
+      </div>
+      <p class="storage-note">Journals stand upright in period bins, labeled on the spine with student name and period. Students find their own by name — no sorting, no distributing, no waiting.</p>
+    </div>
+
+    <div class="storage-steps">
+      <p class="ss-label">The Daily Routine</p>
+      <div class="routine-step">
+        <span class="rs-tag rs-enter">Enter</span>
+        <span>Pick up your journal from the shelf on the way to your seat. This happens before you sit down — it is part of the motion of arriving.</span>
+      </div>
+      <div class="routine-step">
+        <span class="rs-tag rs-class">Open</span>
+        <span>Journal opens before instruction begins. Prompt may be on the board or open free write. Begin writing. The teacher takes attendance while you settle into writing.</span>
+      </div>
+      <div class="routine-step">
+        <span class="rs-tag rs-class">During</span>
+        <span>Journal stays at the corner of your desk. Available for closing write and any mid-class personal reflection moments.</span>
+      </div>
+      <div class="routine-step">
+        <span class="rs-tag rs-class">Close</span>
+        <span>Closing write near the end of class. One sentence to one paragraph. The teacher ends the period — not the bell.</span>
+      </div>
+      <div class="routine-step">
+        <span class="rs-tag rs-exit">Exit</span>
+        <span>Return your journal to the shelf on your way out. Same spot, same bin, every time. If it is not back on the shelf, the system breaks for everyone.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PARENT NOTES / FAQ -->
+<div class="sec">
+  <p class="sec-eye">For Students &amp; Families</p>
+  <h2 class="sec-title">Questions We Hear</h2>
+
+  <ul class="faq-list">
+    <li class="faq-item">
+      <p class="faq-q">If the journal is private, how is it graded?</p>
+      <p class="faq-a">The journal is graded for <strong>use only</strong> — not for content. The teacher can see that pages are being written on without reading what is written. At the end of each quarter, students complete a brief self-assessment reflecting on their own journal habits. What you write is private. Whether you wrote is part of the daily grade.</p>
+    </li>
+    <li class="faq-item">
+      <p class="faq-q">Can I take my journal home?</p>
+      <p class="faq-a"><strong>Journals stay in the classroom.</strong> This is a school preference and a practical one — journals that go home tend to get lost, left behind, or not brought back. Keeping them in the classroom means they are always available, always protected, and never a homework crisis.</p>
+    </li>
+    <li class="faq-item">
+      <p class="faq-q">What if I want to share something from my journal?</p>
+      <p class="faq-a">Sharing is always voluntary. Students are invited to share passages during class at various points in the year — but the invitation is never a requirement. <strong>The teacher will never ask to read a student's journal without the student offering.</strong> Some students choose to show the teacher a passage. Some students never share a word. Both are completely fine.</p>
+    </li>
+    <li class="faq-item">
+      <p class="faq-q">What is the binder for and does it come home?</p>
+      <p class="faq-a">The binder is the academic notebook — class notes, reading analysis, writing drafts, and reference materials. <strong>The binder stays in the classroom</strong> on its own labeled shelf spot. The school prefers binders stay at school so they don't get lost or left behind — students study from it during class and any independent work time, not as homework that requires bringing it home.</p>
+    </li>
+    <li class="faq-item">
+      <p class="faq-q">What is the word of the year?</p>
+      <p class="faq-a">During the first week of school, each student chooses one word that will guide their year — a word they want to grow into, move toward, or live by. Students spend the week discovering it through journal writing rather than choosing it on the spot. The word goes on a decorated index card that lives on the classroom bulletin board all year. At the end of each unit, students return to it in their journal and reflect on how their relationship to the word has changed.</p>
+    </li>
+  </ul>
+</div>
+
+</div>
+<footer>
+  Chamberlain's Literature &nbsp;·&nbsp; The Journal &amp; The Binder &nbsp;·&nbsp; 10th Grade English &nbsp;·&nbsp; El Dorado High School &nbsp;·&nbsp; 2026–27
+</footer>
+
+</body>
+</html>
