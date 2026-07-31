@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Syllabus · Chamberlain's Literature · 2026–27</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#111111;--rose:#f2c4d4;--blush:#fdf0f4;--white:#ffffff;
+  --pink:#f2c4d4;--muted:#555555;--offblack:#333333;
+  --u1:#0F6E56;--u2:#8a6000;--u3:#185FA5;--u4:#534AB7;
+}
+html{font-size:14px}
+body{font-family:"Lato",sans-serif;background:var(--blush);color:var(--black);line-height:1.7}
+a{color:inherit;text-decoration:none}
+
+/* ── NAV ── */
+.cl-nav{background:var(--black);border-bottom:2px solid var(--pink);padding:0 2rem}
+.cl-nav-inner{max-width:820px;margin:0 auto;display:flex;align-items:center;height:48px;gap:.65rem}
+.cl-mark{width:28px;height:28px;background:var(--pink);color:var(--black);font-family:"Playfair Display",serif;font-size:.6rem;font-weight:700;letter-spacing:-.5px;display:flex;align-items:center;justify-content:center;border-radius:2px;flex-shrink:0}
+.cl-name{font-family:"Playfair Display",serif;font-size:.88rem;font-weight:700;color:var(--white)}
+.cl-sub{font-size:.55rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+
+/* ── MASTHEAD ── */
+.masthead{background:var(--black);border-bottom:3px solid var(--pink);padding:2.5rem 2rem 2rem}
+.mh-inner{max-width:820px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end}
+.mh-eye{font-size:.57rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-bottom:.35rem}
+.mh-title{font-family:"Playfair Display",serif;font-size:1.8rem;font-weight:700;color:var(--white);line-height:1.15;margin-bottom:.2rem}
+.mh-sub{font-family:"Playfair Display",serif;font-style:italic;font-size:.9rem;color:rgba(255,255,255,.4)}
+.mh-info{display:flex;flex-direction:column;gap:.35rem;text-align:right}
+.mh-info-row{font-size:.7rem;color:rgba(255,255,255,.5);white-space:nowrap}
+.mh-info-row strong{color:var(--pink);font-weight:700;display:block;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase}
+
+/* ── PAGE ── */
+.page{max-width:820px;margin:0 auto;padding:1.75rem 2rem 4rem}
+
+/* ── SECTIONS ── */
+.syl-sec{margin-bottom:2rem}
+.syl-eye{font-size:.57rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-bottom:.25rem}
+.syl-title{font-family:"Playfair Display",serif;font-size:1rem;font-weight:700;color:var(--black);padding-bottom:.4rem;border-bottom:2px solid var(--pink);margin-bottom:.75rem}
+.syl-body{font-size:.82rem;color:var(--muted);line-height:1.8;margin-bottom:.65rem}
+.syl-body:last-child{margin-bottom:0}
+.syl-body strong{color:var(--black);font-weight:700}
+
+/* ── WELCOME ── */
+.welcome-box{background:var(--white);border:1.5px solid rgba(242,196,212,.5);border-left:4px solid var(--pink);border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin-bottom:1.75rem}
+.welcome-box p{font-size:.83rem;color:var(--offblack);line-height:1.8;margin-bottom:.5rem}
+.welcome-box p:last-child{margin-bottom:0}
+
+/* ── UNIT STRIP ── */
+.unit-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin-bottom:1.25rem}
+.unit-pill{border-radius:5px;padding:.6rem .75rem}
+.unit-pill p:first-child{font-size:.55rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.2rem}
+.unit-pill p:last-child{font-family:"Playfair Display",serif;font-size:.82rem;font-weight:700;line-height:1.3}
+.u1p{background:#E1F5EE;border:1px solid rgba(15,110,86,.3)}
+.u1p p:first-child{color:var(--u1)}.u1p p:last-child{color:var(--u1)}
+.u2p{background:#FFF3D6;border:1px solid rgba(138,96,0,.3)}
+.u2p p:first-child{color:var(--u2)}.u2p p:last-child{color:var(--u2)}
+.u3p{background:#E6F1FB;border:1px solid rgba(24,95,165,.3)}
+.u3p p:first-child{color:var(--u3)}.u3p p:last-child{color:var(--u3)}
+.u4p{background:#EEEDFE;border:1px solid rgba(83,74,183,.3)}
+.u4p p:first-child{color:var(--u4)}.u4p p:last-child{color:var(--u4)}
+
+/* ── GRADE TABLE ── */
+.grade-wrap{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.75rem}
+.grade-bucket{border-radius:6px;overflow:hidden}
+.gb-head{padding:.6rem 1rem;display:flex;align-items:center;justify-content:space-between}
+.gb-head h3{font-family:"Playfair Display",serif;font-size:.95rem;font-weight:700}
+.gb-pct{font-family:"Playfair Display",serif;font-size:1.5rem;font-weight:700;line-height:1}
+.gb-summative .gb-head{background:var(--black);color:var(--white)}
+.gb-summative .gb-pct{color:var(--pink)}
+.gb-formative .gb-head{background:var(--blush);border:1px solid var(--pink);color:var(--black)}
+.gb-formative .gb-pct{color:var(--muted)}
+.gb-body{border:1.5px solid rgba(242,196,212,.4);border-top:none;border-radius:0 0 6px 6px;padding:.65rem 1rem}
+.gb-item{display:flex;justify-content:space-between;align-items:baseline;padding:.35rem 0;border-bottom:1px solid rgba(242,196,212,.3);font-size:.77rem}
+.gb-item:last-child{border-bottom:none}
+.gb-item-name{color:var(--offblack);line-height:1.4;flex:1;padding-right:.5rem}
+.gb-item-note{font-size:.65rem;color:var(--muted);display:block;margin-top:1px}
+.gb-item-wt{font-weight:700;color:var(--black);white-space:nowrap;font-size:.78rem}
+
+/* ── AR TABLE ── */
+.ar-table{width:100%;border-collapse:collapse;font-size:.79rem;margin-bottom:.75rem}
+.ar-table th{background:var(--offblack);color:var(--white);padding:.45rem .85rem;text-align:left;font-size:.58rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.ar-table th:first-child{border-radius:4px 0 0 0}.ar-table th:last-child{border-radius:0 4px 0 0}
+.ar-table td{padding:.5rem .85rem;border-bottom:1px solid rgba(242,196,212,.3);color:var(--offblack);vertical-align:top;line-height:1.5;font-size:.78rem}
+.ar-table tr:last-child td{border-bottom:none}
+
+/* ── EXPECTATIONS LIST ── */
+.exp-list{list-style:none;padding:0;margin-bottom:.5rem}
+.exp-item{display:flex;gap:.6rem;padding:.45rem 0;border-bottom:1px solid rgba(242,196,212,.25);font-size:.79rem;color:var(--offblack);line-height:1.55}
+.exp-item:last-child{border-bottom:none}
+.exp-mark{width:6px;height:6px;border-radius:1px;background:var(--pink);flex-shrink:0;margin-top:6px}
+.exp-item strong{color:var(--black);font-weight:700}
+
+/* ── NOTEBOOK SYSTEM ── */
+.nb-mini{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;margin-bottom:.6rem}
+.nb-sec{border-radius:4px;padding:.5rem .65rem}
+.nb-sec:nth-child(1){background:#E1F5EE;border:1px solid rgba(15,110,86,.3)}
+.nb-sec:nth-child(2){background:#EEEDFE;border:1px solid rgba(83,74,183,.3)}
+.nb-sec:nth-child(3){background:#E6F1FB;border:1px solid rgba(24,95,165,.3)}
+.nb-sec:nth-child(4){background:#FFF3D6;border:1px solid rgba(138,96,0,.3)}
+.nb-num{font-size:.55rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.15rem}
+.nb-name{font-family:"Playfair Display",serif;font-size:.75rem;font-weight:700;color:var(--black);line-height:1.3}
+
+/* ── PRE-AP BOX ── */
+.preap-box{background:rgba(91,45,142,.05);border:1.5px solid rgba(91,45,142,.2);border-radius:6px;padding:.85rem 1rem;margin-bottom:1.25rem}
+.preap-box .pe-eye{font-size:.55rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B2D8E;margin-bottom:.3rem}
+.preap-box p{font-size:.78rem;color:#3a1a6a;line-height:1.7}
+
+/* ── POLICY BOXES ── */
+.policy-row{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-bottom:1rem}
+.policy-card{background:var(--white);border:1.5px solid rgba(242,196,212,.4);border-radius:5px;padding:.75rem .9rem}
+.policy-card h3{font-family:"Playfair Display",serif;font-size:.85rem;font-weight:700;color:var(--black);margin-bottom:.4rem;padding-bottom:.3rem;border-bottom:1.5px solid var(--pink)}
+.policy-card p,.policy-card li{font-size:.76rem;color:var(--muted);line-height:1.65}
+.policy-card ul{padding-left:1rem;margin-top:.25rem}
+.policy-card ul li{margin-bottom:.2rem}
+
+/* ── SIGNATURE ── */
+.signature-box{background:var(--white);border:2px solid var(--black);border-radius:6px;padding:1.1rem 1.25rem;margin-top:1.5rem}
+.sig-eye{font-size:.57rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-bottom:.5rem}
+.sig-title{font-family:"Playfair Display",serif;font-size:.95rem;font-weight:700;color:var(--black);margin-bottom:.6rem}
+.sig-text{font-size:.76rem;color:var(--muted);line-height:1.7;margin-bottom:1rem}
+.sig-lines{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.sig-line-wrap{display:flex;flex-direction:column;gap:.25rem}
+.sig-line{border-bottom:1.5px solid var(--black);height:28px}
+.sig-label{font-size:.58rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.placeholder{background:rgba(242,196,212,.15);border:1px dashed rgba(242,196,212,.6);border-radius:3px;padding:.15rem .5rem;font-size:.6rem;color:var(--pink);font-style:italic}
+
+footer{background:var(--black);border-top:2px solid var(--pink);padding:1rem 2rem;text-align:center;font-size:.58rem;color:rgba(255,255,255,.3);letter-spacing:.08em;text-transform:uppercase}
+
+@media print{
+  body{background:#fff}
+  .cl-nav{display:none}
+  .masthead{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .gb-summative .gb-head,.preap-box,.nb-sec{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .unit-strip .unit-pill{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{size:letter;margin:.55in .65in}
+  .page{padding:0}
+  .signature-box{page-break-inside:avoid}
+}
+@media(max-width:640px){
+  .mh-inner,.grade-wrap,.policy-row,.nb-mini,.unit-strip{grid-template-columns:1fr}
+  .mh-info{text-align:left}
+  .page,.mh-inner,.cl-nav-inner{padding-left:1rem;padding-right:1rem}
+  .sig-lines{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="cl-nav">
+  <div class="cl-nav-inner">
+    <div class="cl-mark">HLC</div>
+    <div>
+      <div class="cl-name">Chamberlain's Literature</div>
+      <div class="cl-sub">10th Grade English · Course Syllabus</div>
+    </div>
+  </div>
+</nav>
+
+<div class="masthead">
+  <div class="mh-inner">
+    <div>
+      <p class="mh-eye">2026–27 Academic Year · El Dorado High School</p>
+      <h1 class="mh-title">Chamberlain's Literature</h1>
+      <p class="mh-sub">10th Grade English · Pre-AP English 2</p>
+    </div>
+    <div class="mh-info">
+      <div class="mh-info-row"><strong>Teacher</strong>Mrs. Heather Chamberlain</div>
+      <div class="mh-info-row"><strong>Email</strong>heather.chamberlain@esd-15.org</div>
+      <div class="mh-info-row"><strong>Room</strong>2429</div>
+      <div class="mh-info-row"><strong>Planning Period</strong>3rd Period</div>
+      <div class="mh-info-row"><strong>Schedule</strong>M Tu Th F: 49–52 min · W: 35 min</div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+<!-- WELCOME -->
+<div class="syl-sec">
+  <p class="syl-eye">Welcome</p>
+  <h2 class="syl-title">About This Class</h2>
+  <div class="welcome-box">
+    <p>This is a reading, writing, and thinking class. We read complex texts closely. We write arguments backed by evidence. We talk about ideas that are worth talking about. And we do all of it in a classroom that makes space for every kind of thinker — because every student in here has something worth saying.</p>
+    <p>This year we will ask four big questions, one per unit. Every text we read, every essay we write, and every conversation we have is practice for thinking more precisely about these questions. By May you will be a stronger reader, a cleaner writer, and a more confident thinker than you are today. That is the goal. That is what this class is for.</p>
+    <p><strong>One more thing:</strong> this classroom runs on two principles. First: we regulate before we work — that means I check in with where you are before I ask anything of you, every single period. Second: we study how texts work before we argue about what they mean. The how always comes before the what. Those two commitments shape everything we do here.</p>
+  </div>
+</div>
+
+<!-- COURSE OVERVIEW -->
+<div class="syl-sec">
+  <p class="syl-eye">Course Overview</p>
+  <h2 class="syl-title">Four Units · Four Questions · One Year</h2>
+  <p class="syl-body">This course is built around Pre-AP English 2 (College Board), an instructional framework that back-maps from Advanced Placement expectations. It emphasizes close reading, argument analysis, evidence-based writing, and academic conversation. Each unit asks a question worth arguing about.</p>
+
+  <div class="unit-strip">
+    <div class="unit-pill u1p">
+      <p>Unit 1 · Q1 · Aug–Oct</p>
+      <p>Truth &amp; Testimony</p>
+    </div>
+    <div class="unit-pill u2p">
+      <p>Unit 2 · Q2 · Oct–Dec</p>
+      <p>Power &amp; Complicity</p>
+    </div>
+    <div class="unit-pill u3p">
+      <p>Unit 3 · Q3 · Jan–Mar</p>
+      <p>Story &amp; History</p>
+    </div>
+    <div class="unit-pill u4p">
+      <p>Unit 4 · Q4 · Mar–May</p>
+      <p>Language &amp; Power</p>
+    </div>
+  </div>
+
+  <div class="preap-box">
+    <p class="pe-eye">Pre-AP English 2 · College Board</p>
+    <p>This course uses the Pre-AP English 2 framework, which means students will complete formal writing tasks at the end of each learning cycle and at the end of each unit. These tasks are scored using a three-part rubric (reading comprehension · analysis · writing). Students will also complete digital learning checkpoints through Pre-AP Classroom. These are designed to look like the kinds of reading and writing students will encounter on standardized assessments and in college coursework.</p>
+  </div>
+</div>
+
+<!-- MATERIALS -->
+<div class="syl-sec">
+  <p class="syl-eye">Materials</p>
+  <h2 class="syl-title">What to Bring Every Day</h2>
+  <p class="syl-body">El Dorado High School provides classroom supplies. Students do not need to purchase materials for this class. What students need to bring every day:</p>
+  <ul class="exp-list">
+    <li class="exp-item"><span class="exp-mark"></span><span><strong>Composition journal</strong> — provided by the school. This is your private writing space. It lives in the classroom. You will write in it every single day. No one reads it without your permission.</span></li>
+    <li class="exp-item"><span class="exp-mark"></span><span><strong>Academic binder</strong> — provided by the school. This is your organized academic notebook. It has dividers and holds your class notes, close reading work, handouts, and writing drafts. It stays in the classroom, organized on the shelf — the school prefers binders stay at school so they don't get lost, so you'll do your studying and review from it during class and in any independent work time.</span></li>
+    <li class="exp-item"><span class="exp-mark"></span><span><strong>A pencil or pen</strong> — you will write every day. Come prepared.</span></li>
+    <li class="exp-item"><span class="exp-mark"></span><span><strong>Your AR book</strong> — keep it in your backpack so it is available when we have reading time. Your reading bookmark — designed and laminated in class — lives in this book.</span></li>
+    <li class="exp-item"><span class="exp-mark"></span><span><strong>Yourself, regulated.</strong> If something is going on before class, that is okay. We check in at the start of every period. You do not have to be fine to come to this class. You just have to come.</span></li>
+  </ul>
+</div>
+
+<!-- GRADING -->
+<div class="syl-sec">
+  <p class="syl-eye">Grading</p>
+  <h2 class="syl-title">How Your Grade Is Built — 60 / 40</h2>
+  <p class="syl-body">Your grade is split between major (summative) work and daily (formative) work. Grades in this class reflect your ability to read closely, construct arguments, and develop as a writer — not whether you agreed with the teacher or followed all the rules.</p>
+
+  <div class="grade-wrap">
+    <div class="grade-bucket gb-summative">
+      <div class="gb-head">
+        <h3>Major Grades — Summative</h3>
+        <div class="gb-pct">60%</div>
+      </div>
+      <div class="gb-body">
+        <div class="gb-item">
+          <div>
+            <span class="gb-item-name"><strong>Pre-AP Performance Tasks</strong></span>
+            <span class="gb-item-note">One per unit (4 per year). Written analytical response to an unseen text. Scored: reading · analysis · writing.</span>
+          </div>
+          <span class="gb-item-wt">Major</span>
+        </div>
+        <div class="gb-item">
+          <div>
+            <span class="gb-item-name"><strong>Learning Cycle Assessments (CSA)</strong></span>
+            <span class="gb-item-note">One per learning cycle (3 per unit). Analytical paragraph(s) in response to a text not studied in class.</span>
+          </div>
+          <span class="gb-item-wt">Major</span>
+        </div>
+        <div class="gb-item">
+          <div>
+            <span class="gb-item-name"><strong>Unit Analytical Writing</strong></span>
+            <span class="gb-item-note">End-of-unit extended essay responding to the unit's essential question using textual evidence.</span>
+          </div>
+          <span class="gb-item-wt">Major</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grade-bucket gb-formative">
+      <div class="gb-head">
+        <h3>Daily Grades — Formative</h3>
+        <div class="gb-pct" style="color:var(--muted)">40%</div>
+      </div>
+      <div class="gb-body">
+        <div class="gb-item">
+          <div>
+            <span class="gb-item-name"><strong>In-Class Work</strong></span>
+            <span class="gb-item-note">Annotations, exit tickets, close reading tasks, SOAPStone charts, observation charts. Scored for completion and engagement — not correctness.</span>
+          </div>
+          <span class="gb-item-wt">Daily</span>
+        </div>
+        <div class="gb-item">
+          <div>
+            <span class="gb-item-name"><strong>Notebook Checks</strong></span>
+            <span class="gb-item-note">Biweekly informal spot checks + formal end-of-unit check (4 per year). Four sections present, dated entries, engagement visible.</span>
+          </div>
+          <span class="gb-item-wt">Daily</span>
+        </div>
+        <div class="gb-item">
+          <div>
+            <span class="gb-item-name"><strong>AR Independent Reading</strong></span>
+            <span class="gb-item-note"> 1 book per quarter.  2 books per quarter. Verified by AR quiz score meeting required point threshold.</span>
+          </div>
+          <span class="gb-item-wt">Daily</span>
+        </div>
+        <div class="gb-item">
+          <div>
+            <span class="gb-item-name"><strong>Seminar &amp; Discussion Participation</strong></span>
+            <span class="gb-item-note">Socratic seminar participation logs. Assessed on preparation, evidence use, and engagement — not verbal confidence alone.</span>
+          </div>
+          <span class="gb-item-wt">Daily</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="syl-body" style="font-size:.75rem"><strong>A note on formative work:</strong> Daily work is scored for completion and genuine engagement. If you did the thinking, you get the credit. This is not a trick — it is a recognition that learning happens in the attempt, not just in the correct answer.</p>
+</div>
+
+<!-- AR -->
+<div class="syl-sec">
+  <p class="syl-eye">Independent Reading</p>
+  <h2 class="syl-title">Accelerated Reader (AR) Requirements</h2>
+  <p class="syl-body">Reading independently — outside of class texts — is one of the most reliable ways to grow as a reader and writer. AR is how we track and recognize that reading.</p>
+  <p class="syl-body">Your teacher will let you know your specific quarterly reading requirement at the start of the year. All students read at minimum one AR book per quarter. Books must meet the AR point threshold and are student-selected — any genre, any reading level that qualifies.</p>
+  <p class="syl-body" style="font-size:.75rem">Books must be approved by the teacher if you are unsure whether they qualify. AR quizzes are taken independently through the school's AR system. Your reading bookmark — designed and laminated in class — lives in this book.</p>
+  <p class="syl-body" style="font-size:.75rem">Books must be approved by the teacher if you are unsure whether they qualify. AR quizzes are taken independently through the school's AR system. Your reading bookmark — designed in class during the first week and laminated by the teacher — is yours to use all year.</p>
+</div>
+
+<!-- NOTEBOOK -->
+<div class="syl-sec">
+  <p class="syl-eye">Your Two Tools</p>
+  <h2 class="syl-title">The Journal &amp; The Binder</h2>
+  <p class="syl-body">This class uses two separate tools that do two different jobs. Knowing which one to open and when is part of how this classroom runs.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.85rem">
+    <div style="background:var(--white);border:1.5px solid var(--pink);border-top:4px solid var(--black);border-radius:5px;padding:.85rem 1rem">
+      <p style="font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.25rem">Tool 1 · Composition Book</p>
+      <p style="font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--black);margin-bottom:.45rem">The Private Journal</p>
+      <p style="font-size:.77rem;color:var(--muted);line-height:1.65;margin-bottom:.35rem">You write in this every day. Personal thoughts, reactions, free writes, word-of-the-year work, whatever is on your mind. <strong style="color:var(--black)">No one reads this without your permission</strong> — not the teacher, not another student. It is yours.</p>
+      <p style="font-size:.72rem;color:var(--pink);font-weight:700">Stays in the classroom · Not graded for content · Only for use</p>
+    </div>
+    <div style="background:var(--white);border:1.5px solid var(--pink);border-top:4px solid var(--pink);border-radius:5px;padding:.85rem 1rem">
+      <p style="font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.25rem">Tool 2 · Binder with Dividers</p>
+      <p style="font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--black);margin-bottom:.45rem">The Academic Notebook</p>
+      <p style="font-size:.77rem;color:var(--muted);line-height:1.65;margin-bottom:.35rem">Your organized academic record. Class notes, close reading work, SOAPStone charts, handouts, and writing drafts all live here in labeled sections. This is what you study from. This is what gets checked.</p>
+      <p style="font-size:.72rem;color:var(--pink);font-weight:700">Organized with dividers · Handouts hole-punched in · Stays in the classroom on the shelf</p>
+    </div>
+  </div>
+
+  <div class="nb-mini">
+    <div class="nb-sec"><div class="nb-num">Tab 1</div><div class="nb-name">Class Notes &amp; Daily Work</div></div>
+    <div class="nb-sec"><div class="nb-num">Tab 2</div><div class="nb-name">Reading &amp; Analysis</div></div>
+    <div class="nb-sec"><div class="nb-num">Tab 3</div><div class="nb-name">Writing &amp; Drafts</div></div>
+    <div class="nb-sec"><div class="nb-num">Tab 4</div><div class="nb-name">Reference Materials</div></div>
+  </div>
+  <p class="syl-body" style="margin-top:.6rem">Handouts are hole-punched and filed in the relevant binder section — not floating loose. Reference sheets (grammar guides, literary terms, SOAPStone reference) live in Tab 4 or in the binder's front pocket. They are tools, not work.</p>
+</div>
+
+<!-- CLASSROOM EXPECTATIONS -->
+<div class="syl-sec">
+  <p class="syl-eye">Classroom Community</p>
+  <h2 class="syl-title">How This Classroom Works</h2>
+  <p class="syl-body">Classroom agreements are made together during the first week of school. The list below will be updated after that conversation. What will not change:</p>
+  <ul class="exp-list">
+    <li class="exp-item"><span class="exp-mark"></span><span><strong>We check in before we dive in.</strong> Every period begins with Fingers 1–5. Your answer is not graded. It is not judged. It is just information — and it matters.</span></li>
+    <li class="exp-item"><span class="exp-mark"></span><span><strong>We do the thinking.</strong> DOK 3 and 4 — analysis, synthesis, evaluation — is the standard here for everyone. You will be scaffolded toward it, but you will not be asked to do less.</span></li>
+    <li class="exp-item"><span class="exp-mark"></span><span><strong>We protect the seminar.</strong> Academic conversation is a skill and a practice. When we are in Socratic seminar, we use the protocols. We listen. We build on each other's ideas.</span></li>
+    <li class="exp-item"><span class="exp-mark"></span><span><strong>We own our mistakes.</strong> Wrong answers are welcome here. Confusion is welcome. What is not welcome is giving up before trying.</span></li>
+    <li class="exp-item"><span class="exp-mark"></span><span><strong>Community agreements</strong> — developed together during Week 1. Will be posted in the classroom and written in every student's Section 4. <span class="placeholder">Updated after Day 3 (Mon Aug 10)</span></span></li>
+  </ul>
+</div>
+
+<!-- POLICIES -->
+<div class="syl-sec">
+  <p class="syl-eye">Policies</p>
+  <h2 class="syl-title">What to Know</h2>
+  <div class="policy-row">
+    <div class="policy-card">
+      <h3>Absent Work</h3>
+      <p>When you are absent, check the absent work bin for your class period near the door first. Then check your class folder in the crate. Then check the board for any notes. <strong>Then ask a classmate.</strong> Then, if still unclear, see the teacher. This order matters — you are in charge of getting your work when you miss.</p>
+    </div>
+    <div class="policy-card">
+      <h3>Late Work</h3>
+      <p>Daily (formative) work: accepted up to one week late for partial credit. Major (summative) work: accepted up to the unit's last day for partial credit. After the unit closes, major grades are final. Talk to the teacher before a deadline if you are struggling — not after.</p>
+    </div>
+    <div class="policy-card">
+      <h3>Technology</h3>
+      <p>This is a no-technology classroom during instruction. Phones are away during class — not visible, not in use. Occasional exceptions (Canva projects, Pre-AP Classroom assessments) will be explicitly announced. Outside of those exceptions, the phone is away.</p>
+    </div>
+    <div class="policy-card">
+      <h3>Academic Integrity</h3>
+      <p>Your writing in this class must be your own. Submitting AI-generated text, copying from another student, or plagiarizing a source are violations of academic integrity and will be handled per school policy. If you are unsure whether something counts as your own work — ask before you submit.</p>
+    </div>
+    <div class="policy-card">
+      <h3>Communication</h3>
+      <p>Email is the best way to reach me outside of school. I respond within 24 hours on school days. For urgent matters, contact the front office. Grades and progress are available through the school's grade portal. Conferences are available by appointment during my planning period.</p>
+    </div>
+    <div class="policy-card">
+      <h3>Redos &amp; Revisions</h3>
+      <p>Major writing grades may be revised once per unit. To qualify for a revision, the student must complete a written reflection identifying specific areas for improvement <strong>before</strong> submitting the revision. Revisions are due before the unit closes. Daily work is not eligible for revision — it is scored for attempt.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SIGNATURE -->
+<div class="signature-box">
+  <p class="sig-eye">Acknowledgment — Student &amp; Parent / Guardian</p>
+  <p class="sig-title">We Have Read and Understand This Syllabus</p>
+  <p class="sig-text">By signing below, the student and parent or guardian confirm that they have read and understand the course expectations, grading structure, AR requirements, and classroom policies outlined in this syllabus. Questions are always welcome — please email <strong>heather.chamberlain@esd-15.org</strong> with any concerns.</p>
+  <div class="sig-lines">
+    <div class="sig-line-wrap">
+      <div class="sig-line"></div>
+      <div class="sig-label">Student signature</div>
+    </div>
+    <div class="sig-line-wrap">
+      <div class="sig-line"></div>
+      <div class="sig-label">Parent / Guardian signature</div>
+    </div>
+    <div class="sig-line-wrap">
+      <div class="sig-line"></div>
+      <div class="sig-label">Date</div>
+    </div>
+  </div>
+  <div style="margin-top:.85rem;padding-top:.75rem;border-top:1px solid rgba(242,196,212,.4)">
+    <div class="sig-line-wrap">
+      <div class="sig-line" style="max-width:400px"></div>
+      <div class="sig-label">Parent / Guardian phone &amp; best contact method</div>
+    </div>
+  </div>
+</div>
+
+</div>
+<footer>Chamberlain's Literature · 10th Grade English · Pre-AP English 2 · El Dorado High School · 2026–27</footer>
+
+</body>
+</html>
